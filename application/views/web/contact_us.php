@@ -4,7 +4,7 @@
     <div class="page-nav no-margin row">
         <div class="container">
             <div class="row">
-                <h2>About Traveler</h2>
+                <h2>Contact Andaman Holidays</h2>
                 <ul>
                     <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
                     <li><i class="fas fa-angle-double-right"></i> About Us</li>
@@ -73,8 +73,8 @@
                         23/H-2, Building<br>
                         TA, AUS District<br>
                         Phone:+91 9159669599<br>
-                        Email:support@smarteyeapps.com<br>
-                        Website:www.smarteyeapps.com.com<br>
+                        Email:andamanholidays@gmail.com<br>
+                        Website:www.andamanholidays.com<br>
 
 
 

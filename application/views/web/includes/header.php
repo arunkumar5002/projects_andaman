@@ -27,11 +27,9 @@
   <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
 </head>
 <script type="text/javascript">
-setTimeout(function() {
-              $('.message').fadeOut('fast');
-            }, 2000); 
-      	 
-
+  setTimeout(function() {
+    $('.message').fadeOut('fast');
+  }, 2000);
 </script>
 
 <body>
@@ -46,7 +44,7 @@ setTimeout(function() {
             </ul>
           </div>
           <div class="col-md-4 logo">
-            <a href="<?php echo base_url()?>web"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" /></a>
+            <a href="<?php echo base_url() ?>web"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" /></a>
             <a data-toggle="collapse" data-target="#menu-jk" href="#menu-jk"><i class="fas d-block d-sm-block d-md-none small-menu fa-bars"></i></a>
           </div>
           <div class="col-md-4 d-none d-md-block social-link">
@@ -65,13 +63,12 @@ setTimeout(function() {
               </li>
             </ul>
           </div>
-		    <?php if ($this->session->flashdata('message')): ?>
-		<div class="alert fade show message p-3 mt-3"
-            style="z-index: 11111;position: absolute;right: 30px; background-color:#34d361 "> 			
-               <?php echo $this->session->flashdata('message'); ?>
-						
-        </div>
-		<?php endif; ?>
+          <?php if ($this->session->flashdata('message')) : ?>
+            <div class="alert fade show message p-3 mt-3" style="z-index: 11111;position: absolute;right: 30px; background-color:#34d361 ">
+              <?php echo $this->session->flashdata('message'); ?>
+
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -82,12 +79,15 @@ setTimeout(function() {
             <li><a href="<?php echo base_url() ?>web">Home</a></li>
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
             <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
-                <ul class="drop_list">
-                  <li><a href="">Adventure Package</a></li>
-                  <li><a href="">Romance Package</a></li>
-                  <li><a href="">Family Package</a></li>
-                  <li><a href="">Holiday Package</a></li>
-                </ul></li>
+              <ul class="drop_list">
+                <li><a href="">Adventure Package</a></li>
+                <li><a href="">Romance Package</a></li>
+                <li><a href="">Holiday Package</a></li>
+               
+                <li><a href="">Family Package</a></li>
+
+              </ul>
+            </li>
             <li><a href="<?php echo base_url() ?>web/blog">Blog</a></li>
             <li><a href="<?php echo base_url() ?>web/gallery">Gallery</a></li>
             <li><a href="<?php echo base_url() ?>web/contact_us">Contact Us</a></li>
@@ -104,7 +104,7 @@ setTimeout(function() {
     </div>
 
 
-  
+
 
 
 
@@ -122,27 +122,27 @@ setTimeout(function() {
                   <div class="modal-body">
                     <h3 class="title">Enquiry Form</h3>
                     <p class="description"> Andaman Coral Holidays - Get Best Deals on Andaman Packages</p>
-                    <form id="enquiryForm" method="POST" action="<?php echo base_url()?>web/enquiry_save">
-                    <div class="form-group">
-                      <span class="input-icon"><i class="fa fa-user" style="color: #454545;"></i></span>
-                      <input type="text" name="fullname" class="form-control" placeholder="Name">
-                    </div>
-					<div class="form-group">
-                      <span class="input-icon"><i class="fa fa-mobile" style="color: #454545;"></i></span>
-                      <input type="number" name="mobile_no" class="form-control" placeholder="Mobile Number">
-                    </div>
-                    <div class="form-group">
-                      <span class="input-icon"><i class="fa-solid fa-envelope" style="color: #454545;"></i></span>
-                      <input type="email" name="email" class="form-control" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                      <span class="input-icon"><i class="fa-solid fa-location-dot" style="color: #454545;"></i></span>
-                      <input type="text" name="location" class="form-control" placeholder="Location">
-                    </div>
+                    <form id="enquiryForm" method="POST" action="<?php echo base_url() ?>web/enquiry_save">
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-user" style="color: #454545;"></i></span>
+                        <input type="text" name="fullname" class="form-control" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-mobile" style="color: #454545;"></i></span>
+                        <input type="number" name="mobile_no" class="form-control" placeholder="Mobile Number">
+                      </div>
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fa-solid fa-envelope" style="color: #454545;"></i></span>
+                        <input type="email" name="email" class="form-control" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fa-solid fa-location-dot" style="color: #454545;"></i></span>
+                        <input type="text" name="location" class="form-control" placeholder="Location">
+                      </div>
 
 
-                    <button type="submit" class="btn">Enquire</button>
-					</form>
+                      <button type="submit" class="btn">Enquire</button>
+                    </form>
                   </div>
                 </div>
               </div>

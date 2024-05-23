@@ -39,7 +39,7 @@
         <div class="col-xl-4">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d1.jpg" alt="package">
+                <img src="<?php echo base_url()?>assets/images/destination/d1.webp" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
@@ -65,7 +65,7 @@
         <div class="col-xl-4">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d3.jpg" alt="package">
+                <img src="<?php echo base_url()?>assets/images/destination/d3.webp" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
@@ -91,7 +91,7 @@
         <div class="col-xl-4">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d2.jpg" alt="package">
+                <img src="<?php echo base_url()?>assets/images/destination/d2.webp" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
@@ -117,7 +117,7 @@
         <div class="col-xl-4 mt-3">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d1.jpg" alt="package">
+                <img src="<?php echo base_url()?>assets/images/destination/d1.webp" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
@@ -142,7 +142,7 @@
         <div class="col-xl-4 mt-3">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d3.jpg" alt="package">
+                <img src="<?php echo base_url()?>assets/images/destination/d3.webp" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
@@ -168,7 +168,7 @@
         <div class="col-xl-4 mt-3">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d2.jpg" alt="package">
+                <img src="<?php echo base_url()?>assets/images/destination/d2.webp" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
