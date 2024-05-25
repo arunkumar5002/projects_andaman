@@ -70,54 +70,42 @@
                         25 N Port Blair, 1 N Havelock (South Sea )
                     </p>
                 </div>
+				<?php foreach ($package as $pac): ?>
                 <div class="head_title mt-3">
 
                     <h5>Package inclusions</h5>
-                    <ul class="mt-3 mb-3">
-                        <li>3-way luxury Cruise</li>
-                        <li>4-way speed boats </li>
-                        <li>All entry tickets</li>
-                        <li>Light and sound show</li>
-                        <li>SUV cab for all sites visits including Airport pickup and drop</li>
-                        <li>Plan- CP (Complimentary Breakfast)</li>
+                    <ul class="mt-3 mb-3"><li><?php echo $pac->package_inclusion; ?></li></ul>
 
-                    </ul>
-
-
+                     
                     <h5>Package exclusions</h5>
+                      <ul class="mt-3 mb-3"><li>
 
-
-                    <ul class="mt-3 mb-3">
-                        <li>Any water activities like </li>
-                        <li>Para sailing</li>
-                        <li>Scuba diving</li>
-                        <li>Snorkelling</li>
-                        <li>Jet ski ride and any other rides or activities as demanded by the guest</li>
-                    </ul>
+                    <?php echo $pac->package_exclusions; ?>
 
                     <h5>Hotels and Package cost</h5>
-
+                     </li></ul>
 
 
 
                     <ul class="mt-1 mb-3">
-                        <li> Standard luxury hotel with all basic amenities at par with 3 Star hotels </li>
+                        <li> <?php echo $pac->package_content; ?></li>
 
                     </ul>
 
-                    <h5> Package cost- ₹128950/_</h5>
+                    <h5> Package cost- ₹<?php echo $pac->package_cost; ?>/_</h5>
 
                     <b>Total Tourist</b>
 
                     <ul class="mt-1 mb-3">
-                        <li>04 Adult.</li>
-                        <li>03 Child(above 5 years).</li>
+                        <li>0<?php echo $pac->adult; ?> Adult.</li>
+                        <li>0<?php echo $pac->child; ?> Child(above 5 years).</li>
 
                     </ul>
 
 
 
                 </div>
+				<?php endforeach; ?>
             </div>
         </div>
 
@@ -194,283 +182,48 @@
 
 
             <!-- Accordion 1  -->
+			<?php $i = 1;
+			foreach ($plans as $list): ?>
             <div class="accordion">
                 <div class="accordion__header">
                     <div class="day_1">
-                        <p>Day-1</p>
+                        <p>Day-<?php echo $i++; ?></p>
                     </div>
 
-                    <h2 class="accordion__question">(Port Blair offering water based activities )</h2>
+                    <h2 class="accordion__question">(<?php echo $list->plan_title; ?> )</h2>
 
                     <span class="accordion__icon">
                         <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
                     </span>
                 </div>
                 <div class="accordion__content">
-                    <p class="accordion__answer">On reaching Port Blair you will be received at Veer Savarkar International Airport by our representative and our team will accompany you to the Hotel for check in process.</p>
-                    <b>Have a short break, take sufficient rest to start your journey with us</b>
-                    <ul>
+					<ul>
                         <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Visit the Cellular Jail to feel the freedom struggles of our forefathers who contributed to freedom movements and explore the British architecture.</li>
+                            <li><?php echo $list->plan_description; ?></li>
                         </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Enjoy the evening at Carbyn's cove beach.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Visit Flag point also known as 1943 Point is a place where the Indian flag was first hoisted on the Indian soil in the year 1943 by Netaji Subhash Chandra Bose.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Witness the Light and sound show at National memorial Cellular Jail.</li>
-                        </div>
-                        <div style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>At the closure of your first day tour enjoy some traditional and western fast foods at Marina food court.</li>
-                        </div>
-
-                    </ul>
+					</ul>	
+                    
                 </div>
             </div>
+			<?php endforeach; ?>
 
-            <!-- Accordion 2  -->
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_2 mt-3">
-                        <p>Day-2</p>
-                    </div>
-                    <h2 class="accordion__question">(Havelock stunning natural beauty)</h2>
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content">
-                    <p class="accordion__answer">Early morning Cruze to Havelock from Port Blair.</p>
-                    <b>On reaching Havelock you will be received by our representative at Harbour and our team will accompany you to the Hotel for the check in process.</b>
-                    <ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>You are now all set to explore one of the world's best holiday destinations.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>On your first day at Havelock you will be visiting the Elephanta beach known for its white sand and crystal clear water where you can have water rides, swimming, diving, snorkeling and many more water activities. </li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Enjoy your whole day here.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Overnight stay at Havelock Island.</li>
-                        </div>
-
-
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Accordion 3 -->
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_3 mt-3">
-                        <p>Day-3</p>
-                    </div>
-                    <h2 class="accordion__question">(Havelock vibrant coral reefs.)</h2>
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content mt-3">
-
-                    <b>Get ready to witness the sunrise at Kalapather</b>
-                    <ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Come back, relax and take your breakfast. Next you will be visiting the world famous Radhanagar beach. </li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Enjoy the whole day in Radhanagar beach and come back to the hotel after witnessing the sunset.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Overnight stay at hotel.</li>
-                        </div>
-
-
-
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Accordion 4 -->
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_4 mt-3">
-                        <p>Day-4</p>
-                    </div>
-                    <h2 class="accordion__question">(Neil white sand beach crystal clear water)</h2>
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content mt-3">
-
-                    <b>Morning Cruze to Neil Island (one of the best and scenic island of the Andamans)
-                        Visit.</b>
-                    <ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Bharatpur beach. </li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Laxmanpur beach.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Natural coral bridge.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Evening cruise to Port Blair.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Stay at Port Blair.</li>
-                        </div>
-
-
-
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Accordion 5 -->
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_1 mt-3">
-                        <p>Day-5</p>
-                    </div>
-                    <h2 class="accordion__question">(Port Blair stunning beaches)</h2>
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content mt-3">
-
-                    <b>On arriving at Port Blair you will be re-checked into the hotel. Take rest and relax to begin your next destinations with us.</b>
-                    <ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Visit Museums. </li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Shopping at local Market if required.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>You will be then taken to Ross Island also known as the Paris of East in the British era which was also the Head quarter of Port Blair during British rule.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>In the evening visit Chidiyatapu the sunset point of Port Blair which is 30 kms from the city of Port Blair.</li>
-                        </div>
-                        <div class="mb-3" style="display: flex; gap: 12px;">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Come back relax, have your dinner and have an overnight stay at hotel.</li>
-                        </div>
-
-
-
-                    </ul>
-                </div>
-            </div>
-            <!-- Accordion 6-->
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_4 mt-3">
-                        <p>Day-6</p>
-                    </div>
-                    <h2 class="accordion__question">(Baratang natural wonders.)</h2>
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content mt-3">
-
-                    <b>Start early because you have to travel nearly 150 kms today to see the heavily dense mangrove creek, limestone cave and mud volcano. If your luck favours you can also see the aboriginal tribe Jarawa while en route.</b>
-                    <ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <li>Come back relax and have an overnight stay at Port Blair.
-                            </li>
-                        </div>
-
-
-
-
-                    </ul>
-                </div>
-            </div>
-            <!-- Accordion 7 -->
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_3 mt-3">
-                        <p>Day-7</p>
-                    </div>
-                    <h2 class="accordion__question">(Airport drop.)</h2>
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content">
-                    <ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <b>With all happy memories and moments it's time to say good bye to The Andaman Islands.
-                            </b>
-                        </div>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <i class="fa-solid fa-hand-point-right mt-2" style="color: #666666;"></i>
-                            <b>Airport drop.
-                            </b>
-                        </div>
-
-
-
-
-                    </ul>
-
-
-
-                </div>
-            </div>
         </div>
 
 
-
+     
         <div class="col-xl-6">
             <section class="wrapper">
                 <img id="mainPhoto" src="<?php echo base_url() ?>assets/images/gallery/gallery_01.webp" />
                 <div class="image-wrapper">
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_01.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_2.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_3.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_4.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_5.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_6.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_7.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_8.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_9.webp" />
-                    <img class="imgCarousel" src="<?php echo base_url() ?>assets/images/gallery/gallery_10.webp" />
+				<?php $image_bundle = explode(',', $pac->image_bundle);
+                    foreach ($image_bundle as $image): ?>
+                    <img class="imgCarousel" src="<?php echo base_url('site/package/' . trim($image)); ?>" />
+                    <?php endforeach; ?>
                 </div>
+				
             </section>
         </div>
+		
     </div>
 </div>
 

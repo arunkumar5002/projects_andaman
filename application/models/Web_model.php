@@ -58,4 +58,34 @@ class Web_model extends CI_Model
 		$this->db->query("UPDATE  pa_contact SET status = 0 Where id='$id'");
 	}
 	
+	 public function get_package_by_id($id) {
+        $query = $this->db->query("SELECT * FROM pa_package WHERE id = $id AND status = 1");
+      return $query->result();
+    }
+	
+	public function get_plans_by_package_id($package_id) {
+    $query = $this->db->query("SELECT * FROM pa_package_plans WHERE package_id = $package_id");
+    return $query->result();
+   }
+
+     public function package_adventure() {
+        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'adventure package' AND status = 1");
+      return $query->result();
+    }
+
+     public function package_romance() {
+        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'romance package' AND status = 1");
+      return $query->result();
+    }
+
+     public function package_holiday() {
+        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'holiday package' AND status = 1");
+      return $query->result();
+    }
+
+     public function package_family() {
+        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'family package' AND status = 1");
+      return $query->result();
+    }
+   
 }	

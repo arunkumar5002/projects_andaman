@@ -36,161 +36,31 @@
 
 <div class="container mb-5">
     <div class="row">
+	<?php foreach ($package as $pac):?>
         <div class="col-xl-4">
 
             <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d1.webp" alt="package">
+                <img src="<?php echo base_url('site/package/' . $pac->image); ?>" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
 
-                <p class="topics">The New Park</p>
-
-                <p>Hotel Deals</p>
+                <p class="topics"><?php echo $pac->package_title; ?></p>
 
 
-                <p style="font-size: 13px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nisi repudiandae ad fuga ut soluta nostrum. Dolores</p>
+                <p style="font-size: 13px;"><?php echo $pac->package_content; ?></p>
 
 
             </div>
 
             <div class="booking">
-                <a class="now" href="<?php echo base_url()?>web/explore">View More</a>
+                <a class="now" href="<?php echo base_url('web/explore/' . $pac->id) ?>">View More</a>
             </div>
 
 
 
         </div>
-        <div class="col-xl-4">
-
-            <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d3.webp" alt="package">
-            </div>
-
-            <div class="mb-3 mt-3" style="margin-left: 10px;">
-
-                <p class="topics">The New Park</p>
-
-                <p>Hotel Deals</p>
-
-
-                <p style="font-size: 13px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nisi repudiandae ad fuga ut soluta nostrum. Dolores</p>
-
-
-            </div>
-
-            <div class="booking">
-                <a class="now" href="./explore.php">View More</a>
-            </div>
-
-
-
-        </div>
-        <div class="col-xl-4">
-
-            <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d2.webp" alt="package">
-            </div>
-
-            <div class="mb-3 mt-3" style="margin-left: 10px;">
-
-                <p class="topics">The New Park</p>
-
-                <p>Hotel Deals</p>
-
-
-                <p style="font-size: 13px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nisi repudiandae ad fuga ut soluta nostrum. Dolores</p>
-
-
-            </div>
-
-            <div class="booking">
-                <a class="now" href="./explore.php">View More</a>
-            </div>
-
-
-
-        </div>
-        <div class="col-xl-4 mt-3">
-
-            <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d1.webp" alt="package">
-            </div>
-
-            <div class="mb-3 mt-3" style="margin-left: 10px;">
-
-                <p class="topics">The New Park</p>
-
-                <p>Hotel Deals</p>
-
-                <p style="font-size: 13px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nisi repudiandae ad fuga ut soluta nostrum. Dolores</p>
-
-
-            </div>
-
-            <div class="booking">
-                <a class="now" href="<?php echo base_url()?>web/explore">View More</a>
-            </div>
-
-
-
-        </div>
-        <div class="col-xl-4 mt-3">
-
-            <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d3.webp" alt="package">
-            </div>
-
-            <div class="mb-3 mt-3" style="margin-left: 10px;">
-
-                <p class="topics">The New Park</p>
-
-                <p>Hotel Deals</p>
-
-
-                <p style="font-size: 13px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nisi repudiandae ad fuga ut soluta nostrum. Dolores</p>
-
-
-            </div>
-
-            <div class="booking">
-                <a class="now" href="./explore.php">View More</a>
-            </div>
-
-
-
-        </div>
-        <div class="col-xl-4 mt-3">
-
-            <div class="packages">
-                <img src="<?php echo base_url()?>assets/images/destination/d2.webp" alt="package">
-            </div>
-
-            <div class="mb-3 mt-3" style="margin-left: 10px;">
-
-                <p class="topics">The New Park</p>
-
-                <p>Hotel Deals</p>
-
-
-                <p style="font-size: 13px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nisi repudiandae ad fuga ut soluta nostrum. Dolores</p>
-
-
-            </div>
-
-            <div class="booking">
-                <a class="now" href="./explore.php">View More</a>
-            </div>
-
-
-
-        </div>
+		<?php endforeach; ?>
     </div>
 
 </div>

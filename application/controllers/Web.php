@@ -10,6 +10,7 @@ class Web extends CI_Controller{
 		$this->load->model('gallery_model');
 		$this->load->model('blog_model');
 		$this->load->model('banner_model');
+		$this->load->model('package_model');
 
     } 
 	
@@ -32,7 +33,7 @@ class Web extends CI_Controller{
     }
 	
 	public function destinations(){
-
+        $data['package'] = $this->package_model->get_list();
         $data['content'] = "web/destinations";
         $this->load->view('web/template', $data);
     }
@@ -55,9 +56,46 @@ class Web extends CI_Controller{
         $this->load->view('web/template', $data);
     }
 	
-	public function explore(){
+	public function explore($id){
 
-        $data['content'] = "web/explore";
+        $data['package'] = $this->web_model->get_package_by_id($id);
+        $data['plans'] = $this->web_model->get_plans_by_package_id($id);
+
+
+        // Load the view with the fetched data
+        $data['content'] = 'web/explore';
+        $this->load->view('web/template', $data);
+    }
+	
+	public function adventure_package(){
+
+        $data['package'] = $this->web_model->package_adventure();
+
+        $data['content'] = "web/destinations";
+        $this->load->view('web/template', $data);
+    }
+	
+	public function family_package(){
+
+        $data['package'] = $this->web_model->package_family();
+
+        $data['content'] = "web/destinations";
+        $this->load->view('web/template', $data);
+    }
+	
+	public function romance_package(){
+
+        $data['package'] = $this->web_model->package_romance();
+
+        $data['content'] = "web/destinations";
+        $this->load->view('web/template', $data);
+    }
+	
+	public function holiday_package(){
+
+        $data['package'] = $this->web_model->package_holiday();
+
+        $data['content'] = "web/destinations";
         $this->load->view('web/template', $data);
     }
 	

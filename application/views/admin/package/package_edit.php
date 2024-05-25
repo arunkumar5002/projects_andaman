@@ -15,17 +15,18 @@
     <div class="card">
       <div class="card-body">
 
-        <form action="<?php echo base_url();?>package/package_save" method="POST" enctype="multipart/form-data" id="formValidationExamples" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
-
+        <form action="<?php echo base_url();?>package/package_update" method="POST" enctype="multipart/form-data" id="formValidationExamples" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
+         <input type="hidden" name="id" value="<?php echo isset($package) ? $package->id : ''; ?>">
 
           <div class="col-md-6 fv-plugins-icon-container">
             <label class="form-label" for="formValidationName">Package category</label>
             <select class="form-select" name="package_title" id="exampleFormControlSelect1" aria-label="Default select example">
-            <option selected="">Select Category</option>
+			<option selected="">Select Category</option>
             <option name="package_title" value="family package">Family package</option>
             <option name="package_title" value="adventure package">Adventure package</option>
             <option name="package_title" value="romance package">Romance package</option>
 			<option name="package_title" value="holiday package">Holiday package</option>
+ 
           </select>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
@@ -36,33 +37,33 @@
 		  
           <div class="col-md-12 fv-plugins-icon-container">
             <label class="form-label" for="formValidationEmail">Package Content</label>
-            <textarea id="bootstrap-maxlength-example2" name="package_content" class="form-control bootstrap-maxlength-example" rows="5" ></textarea>
+            <textarea id="bootstrap-maxlength-example2" name="package_content" class="form-control bootstrap-maxlength-example" rows="5"><?php echo isset($package) ? $package->package_content : '' ?></textarea>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-6 fv-plugins-icon-container">
             <label for="formValidationFile" name="image" class="form-label">Package Cost</label>
-            <input class="form-control" type="number" id="formValidationFile" name="package_cost">
+            <input class="form-control" type="number" id="formValidationFile" name="package_cost" value="<?php echo isset($package) ? $package->package_cost : '' ?>">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-3 fv-plugins-icon-container">
             <label for="formValidationFile" name="adult" class="form-label">Adult</label>
-            <input class="form-control" type="number" id="formValidationFile" name="adult">
+            <input class="form-control" type="number" id="formValidationFile" name="adult" value="<?php echo isset($package) ? $package->adult : '' ?>">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-3 fv-plugins-icon-container">
             <label for="formValidationFile" name="child" class="form-label">Child(above 5 years)</label>
-            <input class="form-control" type="number" id="formValidationFile" name="child">
+            <input class="form-control" type="number" id="formValidationFile" name="child" value="<?php echo isset($package) ? $package->child : '' ?>">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  
 		  <div class="col-12">
             <label class="form-label" for="bootstrap-maxlength-example2">Day Plans</label>
-            <textarea id="file-picker" name="day_plans" class="form-control bootstrap-maxlength-example" rows="5"></textarea>
+            <textarea id="file-picker" name="day_plans" class="form-control bootstrap-maxlength-example" rows="5"><?php echo isset($package) ? $package->day_plans : '' ?></textarea>
           </div>
 		 
 		  <div class="col-12">
             <label class="form-label" for="bootstrap-maxlength-example2">Package Inclusions</label>        
-            <textarea id="" name="package_inclusion" class="form-control bootstrap-maxlength-example" rows="5"></textarea>
+            <textarea id="" name="package_inclusion" class="form-control bootstrap-maxlength-example" rows="5"><?php echo isset($package) ? $package->package_inclusion : '' ?></textarea>
           </div>
 		  
 		  <div class="col-12">
@@ -71,7 +72,7 @@
 		  <label class="form-label" for="bootstrap-maxlength-example2">Package exclusions</label>
           </div>
          </div>     
-            <textarea id="" name="package_exclusions" class="form-control bootstrap-maxlength-example" rows="5"></textarea>
+            <textarea id="" name="package_exclusions" class="form-control bootstrap-maxlength-example" rows="5"><?php echo isset($package) ? $package->package_exclusions : '' ?></textarea>
           </div>
 		  
 		  <div class="col-md-6 fv-plugins-icon-container">
@@ -82,7 +83,7 @@
 
 
           <div class="col-12">
-            <button type="submit" name="submitButton" class="btn btn-info">Submit</button>
+            <button type="submit" name="submitButton" class="btn btn-info">Update</button>
           </div>
 		  </form>
       </div>

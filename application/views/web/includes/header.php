@@ -80,11 +80,11 @@
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
             <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
               <ul class="drop_list">
-                <li><a href="">Adventure Package</a></li>
-                <li><a href="">Romance Package</a></li>
-                <li><a href="">Holiday Package</a></li>
+                <li><a href="<?php echo base_url() ?>web/adventure_package">Adventure Package</a></li>
+                <li><a href="<?php echo base_url() ?>web/romance_package">Romance Package</a></li>
+                <li><a href="<?php echo base_url() ?>web/holiday_package">Holiday Package</a></li>
                
-                <li><a href="">Family Package</a></li>
+                <li><a href="<?php echo base_url() ?>web/family_package">Family Package</a></li>
 
               </ul>
             </li>

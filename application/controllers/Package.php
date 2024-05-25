@@ -23,6 +23,9 @@ class Package extends CI_Controller{
 		$package_cost = $this->input->post('package_cost');
 		$adult = $this->input->post('adult');
 		$child = $this->input->post('child');
+		$day_plans = $this->input->post('day_plans');
+		$package_inclusion = $this->input->post('package_inclusion');
+		$package_exclusions = $this->input->post('package_exclusions');
 		$status = 1;
 		
 		$source = '';
@@ -54,7 +57,7 @@ class Package extends CI_Controller{
             $_FILES['file']['size'] = $_FILES['image_bundle']['size'][$i];
 			
             $config['upload_path']     = 'site/package';
-			$config['allowed_types']   = 'jpg|png|jpeg';
+			$config['allowed_types']   = 'jpg|png|jpeg|webp';
             $config['file_name'] = rand().time();
 
             $this->upload->initialize($config);
@@ -72,7 +75,7 @@ class Package extends CI_Controller{
 	  // exit();
 	   
 	   $this->load->model('package_model');
-	   $this->package_model->save_package($package_title,$package_content,$package_cost,$adult,$child,$source,$image_bundle,$status);
+	   $this->package_model->save_package($package_title,$package_content,$package_cost,$adult,$child,$day_plans,$package_inclusion,$package_exclusions,$source,$image_bundle,$status);
 	   redirect('package/package_list');
 	}
 	
@@ -90,14 +93,49 @@ class Package extends CI_Controller{
 	}
 	
 	public function package_active_save(){
-		$package_id = $this->input->post('package_id');
+    $package_id = $this->input->post('package_id');
+    $plan_titles = $this->input->post('plan_title');
+    $plan_descriptions = $this->input->post('plan_description');
+    $status = 1;
+
+    if (!empty($plan_titles) && is_array($plan_titles)) {
+        foreach ($plan_titles as $index => $title) {
+            $description = isset($plan_descriptions[$index]) ? $plan_descriptions[$index] : '';
+            $this->package_model->save_active_package($package_id, $title, $description, $status);
+        }
+    }
+
+    redirect('package/package_list');
+   }
+   
+   public function package_edit($id){
+		
+		$data['package'] = $this->package_model->edit_package($id);
+        $data['content'] = "admin/package/package_edit";
+        $this->load->view('admin/template', $data);
+	}
+	
+	public function package_update(){
+		$id = $this->input->post('id');
+		$package_content = $this->input->post('package_content');
+		$package_cost = $this->input->post('package_cost');
+		$adult = $this->input->post('adult');
+		$child = $this->input->post('child');
 		$day_plans = $this->input->post('day_plans');
 		$package_inclusion = $this->input->post('package_inclusion');
 		$package_exclusions = $this->input->post('package_exclusions');
-		$status = 1;
-		
-		$this->package_model->save__active_package($package_id,$day_plans,$package_inclusion,$package_exclusions,$status);
-	    redirect('package/package_list');
+
+
+        $this->package_model->update_package($package_content,$package_cost,$adult,$child,$day_plans,$package_inclusion,$package_exclusions, $id);
+
+        redirect('package/package_list');
 	}
+
+   public function package_delete($id){
+		
+		$result = $this->package_model->delete_package($id);
+        redirect('package/package_list');
+	}
+
 	
 }	
