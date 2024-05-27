@@ -83,7 +83,7 @@
                 <li><a href="<?php echo base_url() ?>web/holiday_package">Holiday Special</a></li>
 
                 <li><a href="<?php echo base_url() ?>web/family_package">Family Special</a></li>
-                <li><a href="<?php echo base_url() ?>web/water_rides">Water Rides</a></li>
+                <!-- <li><a href="<?php echo base_url() ?>web/water_rides">Water Rides</a></li> --->
 
 
               </ul>
