@@ -48,8 +48,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7 text">
-        <div class="session-title">
-          <h2>About Andaman Holidays</h2>
+        <div style="padding:5px" class="session-title">
+          <h2 style="text-align: left; ">About Andaman Holidays</h2>
         </div>
         <p>
           Discover the breathtaking beauty of the Andaman Islands, a tropical paradise nestled in the Bay of Bengal. Renowned for their pristine beaches,
@@ -79,9 +79,7 @@
     <div class="session-title">
       <h2>Our Packages</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-        sollicitudin nisi id consequat bibendum. Phasellus at convallis
-        elit. In purus enim, scelerisque id arcu vitae
+      "Discover the magic of your dream destination with our all-inclusive holiday package every detail crafted for an unforgettable adventure and ultimate relaxation."
       </p>
     </div>
     <div class="dest-row row">
@@ -162,57 +160,6 @@
   </div>
 </div>
 
-<!-- our clients and counts -->
-
-
-<div class="container mt-2">
-  <div class="row">
-    <div class="col-xl-4">
-      <div>
-        <div class="travellers">
-          <img src="<?php echo base_url(); ?>assets/images/includes/girl_icon.png" alt="girl-icon">
-        </div>
-
-        <div class="collection">
-          <h4 class="mt-3">50,000+</h4>
-          <h4>Different Trips</h4>
-          <p>For the last decade, GT Holidays have organized more than 50,000 international itineraries.</p>
-        </div>
-
-
-      </div>
-    </div>
-    <div class="col-xl-4">
-      <div>
-        <div class="travellers">
-          <img src="<?php echo base_url(); ?>assets/images/includes/locat_icon.png" alt="girl-icon">
-        </div>
-
-        <div class="collection">
-          <h4 class="mt-3">Extremely Happy<br> Travellers</h4>
-
-          <p>Each and every itinerary is customized according to the taste of the customers.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-4">
-      <div>
-        <div class="travellers">
-          <img src="<?php echo base_url(); ?>assets/images/includes/t_bag.png" alt="girl-icon">
-        </div>
-        <div class="collection">
-
-          <h4 class="mt-3">Handcrafted <br>Experiences</h4>
-
-          <p>Andaman Holidays holds record of great customer satisfaction and all customers are retained with us.</p>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-
-</div>
 
 
 
@@ -222,9 +169,7 @@
 <div class="session-title">
   <h2>Top Most Visited Places</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-    sollicitudin nisi id consequat bibendum. Phasellus at convallis
-    elit. In purus enim, scelerisque id arcu vitae
+  "Explore the Andamans most iconic destinations—where breathtaking landscapes meet unforgettable experiences. Your journey to the top starts here!"
   </p>
 </div>
 
@@ -412,6 +357,61 @@
 
 
 
+<!-- our clients and counts -->
+
+
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-xl-4">
+      <div>
+        <div class="travellers">
+          <img src="<?php echo base_url(); ?>assets/images/includes/girl_icon.png" alt="girl-icon">
+        </div>
+
+        <div class="collection">
+          <h4 class="mt-3">50,000+</h4>
+          <h4>Different Trips</h4>
+          <p>For the last decade, GT Holidays have organized more than 50,000 international itineraries.</p>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div>
+        <div class="travellers">
+          <img src="<?php echo base_url(); ?>assets/images/includes/locat_icon.png" alt="girl-icon">
+        </div>
+
+        <div class="collection">
+          <h4 class="mt-3">Extremely Happy<br> Travellers</h4>
+
+          <p>Each and every itinerary is customized according to the taste of the customers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div>
+        <div class="travellers">
+          <img src="<?php echo base_url(); ?>assets/images/includes/t_bag.png" alt="girl-icon">
+        </div>
+        <div class="collection">
+
+          <h4 class="mt-3">Handcrafted <br>Experiences</h4>
+
+          <p>Andaman Holidays holds record of great customer satisfaction and all customers are retained with us.</p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
 
 <!-- playing carosil -->
 
@@ -419,9 +419,7 @@
 <div class="session-title mt-5">
   <h2>Exclusive Water Rides</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-    sollicitudin nisi id consequat bibendum. Phasellus at convallis
-    elit. In purus enim, scelerisque id arcu vitae
+  "Plunge into excitement with our exclusive water rides—thrilling adventures and refreshing fun await. Dive into the ultimate aquatic experience today!"
   </p>
 </div>
 
@@ -433,7 +431,7 @@
     <div class="slide-track">
       <div class=" col-xl-1 col-1 col-md-1 col-sm-1 slide">
         <img src="./assets/images/team/banana.webp" height="300" alt="banana_ride" />
-        <b class="text-center">Banana Ride</b>
+       
       </div>
       <div class=" col-xl-1  col-1 col-md-1 col-sm-1  slide">
         <img src="./assets/images/team/boatcar.webp" height="300" alt="voatcar" />
@@ -473,8 +471,20 @@
 
 
 
+<!-- Testimoni -->
 
-<!--*************** Testionial  Starts Here *************** -->
+
+
+
+
+
+
+
+
+
+
+
+<!--*************** Testimonial  Starts Here *************** -->
 <section class="customer-serv">
   <div class="container">
     <div class="row session-title">
@@ -492,7 +502,7 @@
         </div>
         <div class="cust-det row">
           <div class="col-sm-3 col-3 img-circl">
-            <img alt="" src="<?php echo base_url(); ?>assets/images/testimonial/member-01.jpg" />
+            <img alt="" src="<?php echo base_url(); ?>assets/images/gallery/gallery_1.webp" />
           </div>
           <div class="col-sm-5 col-5 an-mtc no-padding">
             <b>Sarath Ali</b>
@@ -519,7 +529,7 @@
         </div>
         <div class="cust-det row">
           <div class="col-sm-3 col-3 img-circl">
-            <img alt="" src="<?php echo base_url(); ?>assets/images/testimonial/member-02.jpg" />
+            <img alt="" src="<?php echo base_url(); ?>assets/images/gallery/gallery_5.webp" />
           </div>
           <div class="col-sm-5 col-5 an-mtc no-padding">
             <b>Binny Aderson</b>
@@ -546,7 +556,7 @@
         </div>
         <div class="cust-det row">
           <div class="col-sm-3 col-3 img-circl">
-            <img alt="" src="<?php echo base_url(); ?>assets/images/testimonial/member-03.jpg" />
+            <img alt="" src="<?php echo base_url(); ?>assets/images/gallery/gallery_4.webp" />
           </div>
           <div class="col-sm-5 col-5 an-mtc no-padding">
             <b>Arjun Samluel</b>
@@ -566,6 +576,11 @@
     </div>
   </div>
 </section>
+
+
+
+
+
 
 <!-- image_background_overlay -->
 
@@ -592,8 +607,7 @@
           <div class="detail">
             <h6>100% Safety</h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem, inventore
+            secure Andaman Yatra holiday experience with top-notch safety measures and guided tours.
             </p>
           </div>
           <div class="icon">
@@ -604,8 +618,7 @@
           <div class="detail">
             <h6>Afordable Packages</h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem, inventore
+            Discover affordable holiday packages, offering budget-friendly options for an unforgettable island getaway.
             </p>
           </div>
           <div class="icon">
@@ -624,8 +637,7 @@
           <div class="detail">
             <h6>Tourist Guid</h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem, inventore
+            Explore Islands with Andaman Yatra's expert tourist guides, ensuring a memorable travel experience.
             </p>
           </div>
         </div>
@@ -636,8 +648,7 @@
           <div class="detail">
             <h6>Exciting Places</h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatem, inventore
+        Take you to exciting places like Havelock Island, Radhanagar Beach, and the historic Cellular Jail.
             </p>
           </div>
         </div>
@@ -653,9 +664,7 @@
     <div class="session-title">
       <h2>Our Blog</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-        sollicitudin nisi id consequat bibendum. Phasellus at convallis
-        elit. In purus enim, scelerisque id arcu vitae
+      "Unlock the world with our travel insights—your go-to guide for unforgettable adventures and hidden gems. Journey further with every post!"
       </p>
     </div>
     <div class="blog-row row">

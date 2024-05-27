@@ -80,11 +80,14 @@
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
             <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
               <ul class="drop_list">
-                <li><a href="<?php echo base_url() ?>web/adventure_package">Adventure Package</a></li>
-                <li><a href="<?php echo base_url() ?>web/romance_package">Romance Package</a></li>
-                <li><a href="<?php echo base_url() ?>web/holiday_package">Holiday Package</a></li>
-               
-                <li><a href="<?php echo base_url() ?>web/family_package">Family Package</a></li>
+
+                <li><a href="<?php echo base_url() ?>web/adventure_package">Advanchere Special</a></li>
+                <li><a href="<?php echo base_url() ?>web/romance_package">Romance Special</a></li>
+                <li><a href="<?php echo base_url() ?>web/holiday_package">Holiday Special</a></li>
+
+                <li><a href="<?php echo base_url() ?>web/family_package">Family Special</a></li>
+                <li><a href="<?php echo base_url() ?>web/water_rides">Water Rides</a></li>
+
 
               </ul>
             </li>
@@ -121,7 +124,7 @@
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                   <div class="modal-body">
                     <h3 class="title">Enquiry Form</h3>
-                    <p class="description"> Andaman Coral Holidays - Get Best Deals on Andaman Packages</p>
+                    <p class="description"> Andaman Yatra Holidays - Get Best Deals on Andaman Packages</p>
                     <form id="enquiryForm" method="POST" action="<?php echo base_url() ?>web/enquiry_save">
                       <div class="form-group">
                         <span class="input-icon"><i class="fa fa-user" style="color: #454545;"></i></span>
