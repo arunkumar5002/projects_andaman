@@ -94,27 +94,6 @@
               </li>
 
             </ul>
-
-            <div>
-              <ul class="d-flex">
-                <li>
-                  <a href=""> <i class="fab fa-facebook-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-twitter-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-instagram" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-                <li>
-                  <a href=""> <i class="fab fa-linkedin" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-              </ul>
-
-            </div>
-
-
-
           </div>
 
         </div>
@@ -122,15 +101,20 @@
     </footer>
     <div class="copy">
       <div class="container">
-        <a href="https://www.addobyte.com/">2024 &copy; All Rights Reserved | Designed and Developed by addobyte
-          technologies</a>
+        <a href="https://www.addobyte.com/">2024 &copy; All Rights Reserved | Designed and Developed by Addobyte Technologies</a>
 
         <span>
-          <a><i class="fab fa-github"></i></a>
-          <a><i class="fab fa-google-plus-g"></i></a>
-          <a><i class="fab fa-pinterest-p"></i></a>
-          <a><i class="fab fa-twitter"></i></a>
-          <a><i class="fab fa-facebook-f"></i></a>
+          <ul class="d-flex">
+                <li>
+                  <a href=""> <i class="fab fa-facebook-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-instagram" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
+                </li>
+              </ul>
         </span>
       </div>
     </div>

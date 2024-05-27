@@ -53,13 +53,10 @@
                 <i class="fab fa-facebook-square" style="color: black"></i>
               </li>
               <li>
-                <i class="fab fa-twitter-square" style="color: black"></i>
-              </li>
-              <li>
                 <i class="fab fa-instagram" style="color: black"></i>
               </li>
-              <li>
-                <i class="fab fa-linkedin" style="color: black"></i>
+			  <li>
+                <i class="fab fa-twitter-square" style="color: black"></i>
               </li>
             </ul>
           </div>
