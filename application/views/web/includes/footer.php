@@ -32,18 +32,33 @@
             <h2>From latest Blog</h2>
             <div class="blohjb">
               <p>
-                Welcome to our travel blog, where we bring you the best tips, itineraries, and insights for your next adventure.
+                "Our Andaman tour was an unforgettable experience!"
+
               </p>
-             
+
             </div>
             <div class="blohjb">
               <p>
-                Nestled in the azure waters of the Bay of Bengal, the Andaman Islands are a tropical paradise that offer something for everyone.
+
+                "We had a wonderful time exploring the Andaman Islands."
+
               </p>
             </div>
             <div class="blohjb">
               <p>
-                we're diving into the enchanting Andaman Islands, a destination that promises a perfect blend of relaxation, adventure, and natural beauty.
+
+                "The beauty of the Andaman Islands left us speechless."
+              </p>
+            </div>
+            <div class="blohjb">
+              <p>
+                "From snorkeling in clear waters to enjoying local cuisine,"
+              </p>
+            </div>
+            <div class="blohjb">
+              <p>
+                "Exceptional service and stunning destinations!"
+
               </p>
             </div>
           </div>
@@ -90,6 +105,7 @@
               </li>
 
             </ul>
+
           </div>
 
         </div>
@@ -99,18 +115,25 @@
       <div class="container">
         <a href="https://www.addobyte.com/">2024 &copy; All Rights Reserved | Designed and Developed by Addobyte Technologies</a>
 
-        <span>
-          <ul class="d-flex">
-                <li>
-                  <a href=""> <i class="fab fa-facebook-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-instagram" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fab fa-twitter-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
-                </li>
-              </ul>
+
+        <span style="margin-right: 90px;">
+          <div>
+            <ul class="d-flex">
+              <li>
+                <a href=""> <i class="fab fa-facebook-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-twitter-square" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-instagram" style="color: rgb(146, 146, 146); font-size: 25px;"></i></a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
         </span>
       </div>
     </div>
@@ -118,7 +141,9 @@
     <!-- whatsup -->
     <div class="chat_box">
       <div class="whatsup">
-        <a href="https://wa.me/919933292368" target="_blank"> <img  src="<?php echo base_url(); ?>assets/images/whatsup.svg" alt="chatbox"></a>
+
+        <a href="https://wa.me/919933292368" target="_blank"> <img src="<?php echo base_url(); ?>assets/images/whatsup.svg" alt="chatbox"></a>
+
       </div>
 
     </div>
@@ -290,8 +315,77 @@
 
 
     <!--textimonial-->
-    
 
-    
+    <script>
+      const testimonial = document.querySelector(".testimonial");
+      const slides = document.querySelectorAll(".test");
+      const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+
+      let currentIndex = 0;
+      let interval;
+
+      function updateCarousel() {
+        if (currentIndex >= slides.length) {
+          testimonial.style.transition = "none";
+          currentIndex = 0;
+          testimonial.style.transform = `translateX(${-currentIndex * 100}%)`;
+          setTimeout(() => {
+            testimonial.style.transition = "transform 0.5s ease-in-out";
+            currentIndex++;
+            testimonial.style.transform = `translateX(${-currentIndex * 100}%)`;
+          }, 50);
+        } else if (currentIndex < 0) {
+          testimonial.style.transition = "none";
+          currentIndex = slides.length - 1;
+          testimonial.style.transform = `translateX(${-currentIndex * 100}%)`;
+          setTimeout(() => {
+            testimonial.style.transition = "transform 0.5s ease-in-out";
+            currentIndex--;
+            testimonial.style.transform = `translateX(${-currentIndex * 100}%)`;
+          }, 50);
+        } else {
+          testimonial.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+      }
+
+      function showNextSlide() {
+        currentIndex++;
+        updateCarousel();
+      }
+
+      function showPrevSlide() {
+        currentIndex--;
+        updateCarousel();
+      }
+
+      function startAutoplay() {
+        interval = setInterval(showNextSlide, 3000);
+      }
+
+      function stopAutoplay() {
+        clearInterval(interval);
+      }
+
+      prevButton.addEventListener("click", () => {
+        showPrevSlide();
+        stopAutoplay();
+        startAutoplay();
+      });
+
+      nextButton.addEventListener("click", () => {
+        showNextSlide();
+        stopAutoplay();
+        startAutoplay();
+      });
+
+      testimonial.addEventListener("mouseover", stopAutoplay);
+      testimonial.addEventListener("mouseout", startAutoplay);
+
+      startAutoplay();
+    </script>
+
+
+
 
     </html>

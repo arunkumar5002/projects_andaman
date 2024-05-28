@@ -79,7 +79,7 @@
     <div class="session-title">
       <h2>Our Popular Packages</h2>
       <p>
-      "Discover the magic of your dream destination with our all-inclusive holiday package every detail crafted for an unforgettable adventure and ultimate relaxation."
+        "Discover the magic of your dream destination with our all-inclusive holiday package every detail crafted for an unforgettable adventure and ultimate relaxation."
       </p>
     </div>
     <div class="dest-row row">
@@ -102,10 +102,19 @@
             </div>
 
           </div>
-         <div class="mt-3">
-              <button onclick="window.location.href='<?php echo base_url() ?>web/romance_package'" class="btn btn-outline">View More</button>
-         </div>
+          
 
+
+          <div class="callback">
+            <div class="call_phone">
+              <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
+            </div>
+
+            <div class=" view_more mt-3 mb-3">
+              <button onclick="window.location.href='<?php echo base_url() ?>web/romance_package'" class="btn-5">Request Callback</button>
+            </div>
+          </div>
+          >>>>>>> Stashed changes
         </div>
       </div>
       <div class="col-lg-4 col-md-6 mb-2">
@@ -128,9 +137,17 @@
 
           </div>
 
-          <div class="mt-3">
-            <button onclick="window.location.href='<?php echo base_url() ?>web/adventure_package'" class="btn btn-outline">View More</button>
-          </div>
+         
+            <div class="callback">
+              <div class="call_phone">
+                <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
+              </div>
+
+              <div class=" view_more mt-3 mb-3">
+                <button onclick="window.location.href='<?php echo base_url() ?>web/adventure_package'" class="btn-5">Request Callback</button>
+              </div>
+             
+            </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
@@ -152,9 +169,17 @@
             </div>
 
           </div>
-          <div class="mt-3">
-            <button onclick="window.location.href='<?php echo base_url() ?>web/family_package'" class="btn btn-outline">View More</button>
-          </div>
+         
+            <div class="callback">
+              <div class="call_phone">
+                <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
+              </div>
+
+              <div class=" view_more mt-3 mb-3">
+                <button onclick="window.location.href='<?php echo base_url() ?>web/family_package'" class="btn-5">Request Callback</button>
+              </div>
+              
+            </div>
         </div>
       </div>
     </div>
@@ -170,7 +195,7 @@
 <div class="session-title">
   <h2>Top Most Visited Places</h2>
   <p>
-  "Explore the Andamans most iconic destinations—where breathtaking landscapes meet unforgettable experiences. Your journey to the top starts here!"
+    "Explore the Andamans most iconic destinations—where breathtaking landscapes meet unforgettable experiences. Your journey to the top starts here!"
   </p>
 </div>
 
@@ -353,6 +378,9 @@
 
 <div class="mt-3 onclick">
   <a href="<?php echo base_url() ?>web/destinations"><button class="btn btn-outline">View More</button></a>
+
+
+
 </div>
 
 
@@ -420,7 +448,7 @@
 <div class="session-title mt-5">
   <h2>Exclusive Water Rides</h2>
   <p>
-  "Plunge into excitement with our exclusive water rides—thrilling adventures and refreshing fun await. Dive into the ultimate aquatic experience today!"
+    "Plunge into excitement with our exclusive water rides—thrilling adventures and refreshing fun await. Dive into the ultimate aquatic experience today!"
   </p>
 </div>
 
@@ -432,7 +460,7 @@
     <div class="slide-track">
       <div class=" col-xl-1 col-1 col-md-1 col-sm-1 slide">
         <img src="./assets/images/team/banana.webp" height="300" alt="banana_ride" />
-       
+
       </div>
       <div class=" col-xl-1  col-1 col-md-1 col-sm-1  slide">
         <img src="./assets/images/team/boatcar.webp" height="300" alt="voatcar" />
@@ -466,117 +494,63 @@
 </div>
 
 
-<div class="mt-5 onclick mb-5">
-  <a href="<?php echo base_url() ?>web/explore"><button class="btn btn-outline">View More</button></a>
+
+<div class=" view_more mt-3  mb-3">
+  <a href="<?php echo base_url() ?>web/explore"> <button style="width: 150px;" class="btn-5">View More</button></a>
 </div>
 
 
 
 <!-- Testimoni -->
+<div class=" session-title">
+  <h2>Testimonital</h2>
+</div>
+
+<div class="container mb-5">
 
 
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <div class="test">
+        <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_12.webp" alt="Client 1" />
+        <p class="client-name  mt-3">- Janidan</p>
+        <p class="testimonial-text">
+          "Our Andaman tour was an unforgettable experience! The beaches were pristine,<br> and the tour guides were fantastic."
+        </p>
 
+      </div>
+      <div class="test">
+        <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_10.webp" alt="Client 2" />
+        <p class="client-name  mt-3">- Jack Daniyal</p>
+        <p class="testimonial-text">
+          "We had a wonderful time exploring the Andaman Islands. The service was <br>excellent and everything was perfectly organized."
+        </p>
 
+      </div>
+      <div class="test">
+        <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_9.webp" alt="Client 3" />
+        <p class="client-name mt-3">- Stalin</p>
+        <p class="testimonial-text">
+          "The beauty of the Andaman Islands left us speechless. The tour package offered<br> great value and covered all the must-see spots."
+        </p>
 
+      </div>
 
-
-
-
-
-
-
-<!--*************** Testimonial  Starts Here *************** -->
-<section class="customer-serv">
-  <div class="container">
-    <div class="row session-title">
-      <h2>Testimonital</h2>
     </div>
 
-    <div class="row ro-clo">
-      <div data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: scrollReveal" class="col-12 col-md-6 col-lg-4">
-        <div class="shado-2 card-b">
-          <p>
-            Classic Aqua water purify is good.Because its cure our purify
-            that is called health and gives good life. I suggest classic
-            aqua for its best purify of water
-          </p>
-        </div>
-        <div class="cust-det row">
-          <div class="col-sm-3 col-3 img-circl">
-            <img alt="" src="<?php echo base_url(); ?>assets/images/gallery/gallery_1.webp" />
-          </div>
-          <div class="col-sm-5 col-5 an-mtc no-padding">
-            <b>Sarath Ali</b>
-            <p>(Sales Agent)</p>
-          </div>
-          <div class="col-sm-4 col-4 star-par">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="shado-2 card-b">
-          <p>
-            have use this product at my home last 1 and half year of this.
-            This product quality is good.Its good quality product for use it
-            can improve water Quality.
-          </p>
-        </div>
-        <div class="cust-det row">
-          <div class="col-sm-3 col-3 img-circl">
-            <img alt="" src="<?php echo base_url(); ?>assets/images/gallery/gallery_5.webp" />
-          </div>
-          <div class="col-sm-5 col-5 an-mtc no-padding">
-            <b>Binny Aderson</b>
-            <p>(Sales Agent)</p>
-          </div>
-          <div class="col-sm-4 col-4 star-par">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div data-anijs="if: scroll, on: window, do: bounceInRight animated, before: scrollReveal" class="col-12 col-md-6 col-lg-4">
-        <div class="shado-2 card-b">
-          <p>
-            Very essensial product.it is clean and helthy water is mutually
-            most important so that acqa is fufil its quality.our life now a
-            days very tressful and restless
-          </p>
-        </div>
-        <div class="cust-det row">
-          <div class="col-sm-3 col-3 img-circl">
-            <img alt="" src="<?php echo base_url(); ?>assets/images/gallery/gallery_4.webp" />
-          </div>
-          <div class="col-sm-5 col-5 an-mtc no-padding">
-            <b>Arjun Samluel</b>
-            <p>(Sales Agent)</p>
-          </div>
-          <div class="col-sm-4 col-4 star-par">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <i class=" prev updown fa-solid fa-angle-left"></i>
+    <i class=" next updown fa-solid fa-chevron-right"></i>
   </div>
-</section>
+</div>
+
+
+
+
+
+
+
+<!--*************** Testimonial  end Here *************** -->
+
 
 
 
@@ -585,7 +559,7 @@
 
 <!-- image_background_overlay -->
 
-<div id="parallax-wrapper">
+<div class="mt-3" id="parallax-wrapper">
   <section>
     <div class="p-one parallax-inner">
 
@@ -608,7 +582,7 @@
           <div class="detail">
             <h6>100% Safety</h6>
             <p>
-            secure Andaman Yatra holiday experience with top-notch safety measures and guided tours.
+              secure Andaman Yatra holiday experience with top-notch safety measures and guided tours.
             </p>
           </div>
           <div class="icon">
@@ -619,7 +593,7 @@
           <div class="detail">
             <h6>Afordable Packages</h6>
             <p>
-            Discover affordable holiday packages, offering budget-friendly options for an unforgettable island getaway.
+              Discover affordable holiday packages, offering budget-friendly options for an unforgettable island getaway.
             </p>
           </div>
           <div class="icon">
@@ -638,7 +612,7 @@
           <div class="detail">
             <h6>Tourist Guid</h6>
             <p>
-            Explore Islands with Andaman Yatra's expert tourist guides, ensuring a memorable travel experience.
+              Explore Islands with Andaman Yatra's expert tourist guides, ensuring a memorable travel experience.
             </p>
           </div>
         </div>
@@ -649,7 +623,7 @@
           <div class="detail">
             <h6>Exciting Places</h6>
             <p>
-        Take you to exciting places like Havelock Island, Radhanagar Beach, and the historic Cellular Jail.
+              Take you to exciting places like Havelock Island, Radhanagar Beach, and the historic Cellular Jail.
             </p>
           </div>
         </div>
@@ -665,22 +639,23 @@
     <div class="session-title">
       <h2>Our Blog</h2>
       <p>
-      Welcome to our travel blog, where we bring you the best tips, itineraries, and insights for your next adventure. Today, we're diving into the enchanting Andaman Islands, a destination that promises a perfect blend of relaxation, adventure, and natural beauty.
+
+        "Unlock the world with our travel insights—your go-to guide for unforgettable adventures and hidden gems. Journey further with every post!"
+
       </p>
     </div>
     <div class="blog-row row">
-	<?php foreach ($blog as $bg): ?>
-      <div class="col-lg-4 col-md-6">
-        <div class="blog-col">
-          <img src="<?php echo base_url('site/blog/' . $bg->image); ?>" alt="blog_andaman" />
-          <h4><?php echo $bg->name; ?></h4>
+      <?php foreach ($blog as $bg) : ?>
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-col">
+            <img src="<?php echo base_url('site/blog/' . $bg->image); ?>" alt="blog_andaman" />
+            <h4><?php echo $bg->name; ?></h4>
+          </div>
         </div>
-      </div>
-	  <?php endforeach; ?>
+      <?php endforeach; ?>
     </div>
   </div>
   <div class="mt-3 onclick">
-  <a href="<?php echo base_url() ?>web/blog"><button class="btn btn-outline">View our Blogs</button></a>
+    <a href="<?php echo base_url() ?>web/blog"><button class="btn btn-outline">View our Blogs</button></a>
+  </div>
 </div>
-</div>
-

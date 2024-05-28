@@ -48,7 +48,7 @@
             <a href="<?php echo base_url() ?>web"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" /></a>
             <a data-toggle="collapse" data-target="#menu-jk" href="#menu-jk"><i class="fas d-block d-sm-block d-md-none small-menu fa-bars"></i></a>
           </div>
-          <div class="col-md-4 d-none d-md-block social-link">
+          <div  class="col-md-4 d-none d-md-block social-link">
             <ul>
               <li>
                 <i class="fab fa-facebook-square" style="color: black"></i>
@@ -56,9 +56,7 @@
               <li>
                 <i class="fab fa-instagram" style="color: black"></i>
               </li>
-			  <li>
-                <i class="fab fa-twitter-square" style="color: black"></i>
-              </li>
+
             </ul>
           </div>
           <?php if ($this->session->flashdata('message')) : ?>
