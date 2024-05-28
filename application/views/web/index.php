@@ -114,7 +114,7 @@
               <button onclick="window.location.href='<?php echo base_url() ?>web/romance_package'" class="btn-5">Request Callback</button>
             </div>
           </div>
-          >>>>>>> Stashed changes
+          
         </div>
       </div>
       <div class="col-lg-4 col-md-6 mb-2">
@@ -376,12 +376,11 @@
 
 </div>
 
-<div class="mt-3 onclick">
-  <a href="<?php echo base_url() ?>web/destinations"><button class="btn btn-outline">View More</button></a>
 
-
-
+<div class=" view_more mt-3  mb-3">
+  <a href="<?php echo base_url() ?>web/destinations"> <button style="width: 150px;" class="btn-5">View More</button></a>
 </div>
+
 
 
 
@@ -655,7 +654,9 @@
       <?php endforeach; ?>
     </div>
   </div>
-  <div class="mt-3 onclick">
-    <a href="<?php echo base_url() ?>web/blog"><button class="btn btn-outline">View our Blogs</button></a>
-  </div>
+ 
+<div class=" view_more mt-3  mb-3">
+  <a href="<?php echo base_url() ?>web/explore"> <button style="width: 150px;" class="btn-5">View Our Blog</button></a>
+</div>
+
 </div>
