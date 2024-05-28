@@ -66,7 +66,7 @@
               <div class="app-brand justify-content-center">
                 <a href="<?php echo base_url();?>admin" class="app-brand-link gap-2">
                   <span class="app-brand-logo demo">
-                    <img src="<?php echo base_url(); ?>assetsad\img\andaman_logo.png" alt="" style="width:100%; height:82px">
+                    <img src="<?php echo base_url(); ?>assetsad\img\andaman_logo.png" alt="logo_andaman" style="width:100%; height:80px">
                   </span>
                  
                 </a>

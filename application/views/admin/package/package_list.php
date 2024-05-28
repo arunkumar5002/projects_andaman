@@ -42,7 +42,7 @@
 								<td><?php echo $row->package_cost; ?></td>
                                 <td style="width:25%;">
                                     <?php if ($row->image != ''): ?>
-                                        <img src="<?php echo base_url('site/package/' . $row->image); ?>" alt="Avatar" class="gallery">
+                                        <img src="<?php echo base_url('site/package/' . $row->image); ?>" alt="package_andaman" class="gallery">
                                     <?php endif; ?>
                                 </td>
                                 <td>

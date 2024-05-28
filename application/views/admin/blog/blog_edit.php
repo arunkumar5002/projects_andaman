@@ -6,7 +6,7 @@
             
             
 <h4 class="py-3 mb-4">
-  <span class="text-muted fw-light">Home /</span> Gallery Create
+  <span class="text-muted fw-light">Home /</span> Blog Create
 </h4>
 
 <div class="row">

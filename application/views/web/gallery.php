@@ -21,7 +21,7 @@
         <?php foreach ($gallery as $row): ?>
         <div class="col-sm-4 col-md-4 col-xl-4 col-6 mt-2 mb-3">
             <a class="lightbox" href="<?php echo base_url('site/gallery/' . $row->image); ?>">
-                <img src="<?php echo base_url('site/gallery/' . $row->image); ?>" alt="Bridge">
+                <img src="<?php echo base_url('site/gallery/' . $row->image); ?>" alt="gallery_andaman">
             </a>
         </div>
         <?php endforeach; ?>

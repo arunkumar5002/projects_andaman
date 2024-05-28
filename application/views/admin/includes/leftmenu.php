@@ -70,7 +70,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo " style="height:100px;">
             <a href="<?php echo base_url()?>dashboard" class="app-brand-link">
-						<img src="<?php echo base_url(); ?>assetsad\img\andaman_logo.png" alt="" style="width:100%;">
+						<img src="<?php echo base_url(); ?>assetsad\img\andaman_logo.png" alt="logo_andaman" style="width:100%;">
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">

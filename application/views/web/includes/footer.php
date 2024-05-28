@@ -12,8 +12,7 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="addet">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Mollitia 56778
+                04/52 North Mount road, Andaman Dt, Andaman Tk, Andaman State, Pin:23562.
               </div>
             </div>
             <div class="foot-address">
@@ -33,21 +32,18 @@
             <h2>From latest Blog</h2>
             <div class="blohjb">
               <p>
-                dignissim. Integer tempor facilisis malesuada. Proin ac varius
-                velit, tincidunt condimentum
+                Welcome to our travel blog, where we bring you the best tips, itineraries, and insights for your next adventure.
               </p>
              
             </div>
             <div class="blohjb">
               <p>
-                dignissim. Integer tempor facilisis malesuada. Proin ac varius
-                velit, tincidunt condimentum
+                Nestled in the azure waters of the Bay of Bengal, the Andaman Islands are a tropical paradise that offer something for everyone.
               </p>
             </div>
             <div class="blohjb">
               <p>
-                dignissim. Integer tempor facilisis malesuada. Proin ac varius
-                velit, tincidunt condimentum
+                we're diving into the enchanting Andaman Islands, a destination that promises a perfect blend of relaxation, adventure, and natural beauty.
               </p>
             </div>
           </div>
@@ -122,7 +118,7 @@
     <!-- whatsup -->
     <div class="chat_box">
       <div class="whatsup">
-        <a href="https://wa.me/919933292368" target="_blank"> <img  src="./assets/images/whatsup.svg" alt="chatbox"></a>
+        <a href="https://wa.me/919933292368" target="_blank"> <img  src="<?php echo base_url(); ?>assets/images/whatsup.svg" alt="chatbox"></a>
       </div>
 
     </div>

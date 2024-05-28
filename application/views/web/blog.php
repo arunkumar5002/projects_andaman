@@ -20,13 +20,13 @@
         <div class="container">
              <div class="session-title">
                 <h2>Our Blog</h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin nisi id consequat bibendum. Phasellus at convallis elit. In purus enim, scelerisque id arcu vitae</p>
+                 <p>Welcome to our travel blog, where we bring you the best tips, itineraries, and insights for your next adventure. Today, we're diving into the enchanting Andaman Islands, a destination that promises a perfect blend of relaxation, adventure, and natural beauty.</p>
             </div>
                 <div class="blog-row row">
 				<?php foreach ($blog as $row): ?>
                     <div class="col-lg-4 col-md-6 ">
                        <div class="blog-col">
-                            <img src="<?php echo base_url('site/blog/' . $row->image); ?>" alt="">
+                            <img src="<?php echo base_url('site/blog/' . $row->image); ?>" alt="blog_andaman">
                             <h4><?php echo $row->name; ?></h4>
                             <p><?php echo $row->content; ?></p>
                        </div>

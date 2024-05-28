@@ -13,7 +13,7 @@
     <div class="carousel-inner">
       <?php foreach ($banner as $index => $list) : ?>
         <div class="carousel-item <?php echo ($index == 0) ? 'active' : ''; ?>">
-          <img class="d-block w-100" src="<?php echo base_url('site/banner/' . $list->image); ?>" alt="Slide <?php echo $index + 1; ?>" />
+          <img class="d-block w-100" src="<?php echo base_url('site/banner/' . $list->image); ?>" alt="Slide_andaman <?php echo $index + 1; ?>" />
 
           <div class=" col-xl-4 carousel-caption d-none d-md-block">
             <h5 class="animated bounceInDown"><?php echo $list->name; ?></h5>
@@ -77,7 +77,7 @@
 <div class="destinations container-fluid">
   <div class="container">
     <div class="session-title">
-      <h2>Our Packages</h2>
+      <h2>Our Popular Packages</h2>
       <p>
       "Discover the magic of your dream destination with our all-inclusive holiday package every detail crafted for an unforgettable adventure and ultimate relaxation."
       </p>
@@ -102,9 +102,10 @@
             </div>
 
           </div>
-          <div class="mt-3">
-            <button class="btn btn-outline">View More</button>
-          </div>
+         <div class="mt-3">
+              <button onclick="window.location.href='<?php echo base_url() ?>web/romance_package'" class="btn btn-outline">View More</button>
+         </div>
+
         </div>
       </div>
       <div class="col-lg-4 col-md-6 mb-2">
@@ -128,7 +129,7 @@
           </div>
 
           <div class="mt-3">
-            <button class="btn btn-outline">View More</button>
+            <button onclick="window.location.href='<?php echo base_url() ?>web/adventure_package'" class="btn btn-outline">View More</button>
           </div>
         </div>
       </div>
@@ -152,7 +153,7 @@
 
           </div>
           <div class="mt-3">
-            <button class="btn btn-outline">View More</button>
+            <button onclick="window.location.href='<?php echo base_url() ?>web/family_package'" class="btn btn-outline">View More</button>
           </div>
         </div>
       </div>
@@ -351,7 +352,7 @@
 </div>
 
 <div class="mt-3 onclick">
-  <a href="<?php echo base_url() ?>web/explore"><button class="btn btn-outline">View More</button></a>
+  <a href="<?php echo base_url() ?>web/destinations"><button class="btn btn-outline">View More</button></a>
 </div>
 
 
@@ -664,46 +665,22 @@
     <div class="session-title">
       <h2>Our Blog</h2>
       <p>
-      "Unlock the world with our travel insights—your go-to guide for unforgettable adventures and hidden gems. Journey further with every post!"
+      Welcome to our travel blog, where we bring you the best tips, itineraries, and insights for your next adventure. Today, we're diving into the enchanting Andaman Islands, a destination that promises a perfect blend of relaxation, adventure, and natural beauty.
       </p>
     </div>
     <div class="blog-row row">
+	<?php foreach ($blog as $bg): ?>
       <div class="col-lg-4 col-md-6">
         <div class="blog-col">
-          <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_7.webp" alt="" />
-          <span>August 9, 2019</span>
-          <h4>Orci varius consectetur adipiscing natoque penatibus</h4>
-          <p>
-            Orci varius natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Praesent accumsan, leo in venenatis
-            dictum,
-          </p>
+          <img src="<?php echo base_url('site/blog/' . $bg->image); ?>" alt="blog_andaman" />
+          <h4><?php echo $bg->name; ?></h4>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="blog-col">
-          <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_3.webp" alt="" />
-          <span>August 9, 2019</span>
-          <h4>Orci varius consectetur adipiscing natoque penatibus</h4>
-          <p>
-            Orci varius natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Praesent accumsan, leo in venenatis
-            dictum,
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="blog-col">
-          <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_12.webp" alt="" />
-          <span>August 9, 2019</span>
-          <h4>Orci varius consectetur adipiscing natoque penatibus</h4>
-          <p>
-            Orci varius natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Praesent accumsan, leo in venenatis
-            dictum,
-          </p>
-        </div>
-      </div>
+	  <?php endforeach; ?>
     </div>
   </div>
+  <div class="mt-3 onclick">
+  <a href="<?php echo base_url() ?>web/blog"><button class="btn btn-outline">View our Blogs</button></a>
 </div>
+</div>
+

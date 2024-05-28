@@ -20,7 +20,7 @@
     <div class="container">
         <div class="session-title">
             <h2>Awesome Packages</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin nisi id consequat bibendum. Phasellus at convallis elit. In purus enim, scelerisque id arcu vitae</p>
+            <p>Experience the unparalleled beauty of the Andaman Islands with our Awesome Andaman Packages. These meticulously curated holiday packages offer a perfect blend of adventure, relaxation, and cultural exploration. Discover pristine beaches, vibrant coral reefs, lush greenery, and historical landmarks that make the Andaman Islands a true paradise.</p>
         </div>
 
     </div>
@@ -37,7 +37,7 @@
 <div class="container mb-5">
     <div class="row">
 	<?php foreach ($package as $pac):?>
-        <div class="col-xl-4">
+        <div class="col-xl-4 mt-3">
 
             <div class="packages">
                 <img src="<?php echo base_url('site/package/' . $pac->image); ?>" alt="package">

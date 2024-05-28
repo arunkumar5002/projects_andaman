@@ -58,6 +58,11 @@ class Web_model extends CI_Model
 		$this->db->query("UPDATE  pa_contact SET status = 0 Where id='$id'");
 	}
 	
+	public function blog_list(){
+		$query = $this->db->query("SELECT * FROM pa_blog where status = 1 ORDER BY id DESC LIMIT 3;");
+		return $query->result();
+	}
+	
 	 public function get_package_by_id($id) {
         $query = $this->db->query("SELECT * FROM pa_package WHERE id = $id AND status = 1");
       return $query->result();

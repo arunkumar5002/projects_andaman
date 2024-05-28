@@ -40,7 +40,7 @@
                                 <td class="package-content"><?php echo $row->content; ?></td>
                                 <td style="width:25%;">
                                     <?php if ($row->image != ''): ?>
-                                        <img src="<?php echo base_url('site/blog/' . $row->image); ?>" alt="Avatar" class="gallery">
+                                        <img src="<?php echo base_url('site/blog/' . $row->image); ?>" alt="blog_andaman" class="gallery">
                                     <?php endif; ?>
                                 </td>
                                 <td>

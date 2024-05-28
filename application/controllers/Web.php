@@ -17,7 +17,7 @@ class Web extends CI_Controller{
 	public function index() {
 		
     $data['banner'] = $this->banner_model->get_list();
-	
+	$data['blog'] = $this->web_model->blog_list();
 	/* echo"<pre>";
 	print_r($data['banner']);
 	exit(); */

@@ -22,10 +22,10 @@
             <label class="form-label" for="formValidationName">Package category</label>
             <select class="form-select" name="package_title" id="exampleFormControlSelect1" aria-label="Default select example">
             <option selected="">Select Category</option>
-            <option name="package_title" value="family package">Family package</option>
-            <option name="package_title" value="adventure package">Adventure package</option>
-            <option name="package_title" value="romance package">Romance package</option>
-			<option name="package_title" value="holiday package">Holiday package</option>
+            <option name="package_title" value="Family package">Family package</option>
+            <option name="package_title" value="Adventure package">Adventure package</option>
+            <option name="package_title" value="Romance package">Romance package</option>
+			<option name="package_title" value="Holiday package">Holiday package</option>
           </select>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
