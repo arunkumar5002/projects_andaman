@@ -495,7 +495,7 @@
 
 
 <div class=" view_more mt-3  mb-3">
-  <a href="<?php echo base_url() ?>web/explore"> <button style="width: 150px;" class="btn-5">View More</button></a>
+  <a href="<?php echo base_url() ?>web/destinations"> <button style="width: 150px;" class="btn-5">View More</button></a>
 </div>
 
 
@@ -656,7 +656,7 @@
   </div>
  
 <div class=" view_more mt-3  mb-3">
-  <a href="<?php echo base_url() ?>web/explore"> <button style="width: 150px;" class="btn-5">View Our Blog</button></a>
+  <a href="<?php echo base_url() ?>web/blog"> <button style="width: 150px;" class="btn-5">View Our Blog</button></a>
 </div>
 
 </div>
