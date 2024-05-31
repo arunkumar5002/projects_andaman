@@ -327,7 +327,7 @@ header {
 	color: #fff;
 }
 header .header-top {
-	padding: 10px;
+	padding: 3px;
 	background-color: white;
 }
 @media screen and (max-width: 767px) {
@@ -346,6 +346,10 @@ header .header-top .mail-detail ul li {
 }
 header .header-top .logo {
 	text-align: center;
+}
+
+.logo img{
+	height: 90px;
 }
 @media screen and (max-width: 767px) {
 	header .header-top .logo {
@@ -1890,7 +1894,7 @@ header {
 
 header.sticky {
 	background: linear-gradient(1deg, #2273ba, #35bcde);
-	top: -11.5%;
+	top: -10.2%;
 	
 }
 

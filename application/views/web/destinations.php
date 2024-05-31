@@ -40,7 +40,7 @@
         <div class="col-xl-4 mt-3">
 
             <div class="packages">
-                <img src="<?php echo base_url('site/package/' . $pac->image); ?>" alt="package">
+                <img src="<?php echo base_url('site/package/'. $pac->image); ?>" alt="package">
             </div>
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">

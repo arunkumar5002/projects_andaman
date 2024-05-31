@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="andaman">
-  <title>ANDAMAN_HOLIDAYS</title>
+  <title>ANDAMAN HOLIDAYS</title>
   <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/fav.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/all.min.css" />
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/animate.css" />
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css" />
-  <link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon_2.png" type="image/x-icon" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
@@ -45,13 +45,16 @@
             </ul>
           </div>
           <div class="col-md-4 logo">
-            <a href="<?php echo base_url() ?>web"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" /></a>
+            <a href="<?php echo base_url() ?>web"><img src="<?php echo base_url(); ?>assets/images/logo_2.png" alt="logo"/></a>
             <a data-toggle="collapse" data-target="#menu-jk" href="#menu-jk"><i class="fas d-block d-sm-block d-md-none small-menu fa-bars"></i></a>
           </div>
           <div  class="col-md-4 d-none d-md-block social-link">
             <ul>
               <li>
                 <i class="fab fa-facebook-square" style="color: black"></i>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-twitter-square" style="color: black"></i></a>
               </li>
               <li>
                 <i class="fab fa-instagram" style="color: black"></i>
@@ -108,7 +111,7 @@
 
 
 
-    <div class="container mb-5">
+    <div class="container ">
       <div class="row">
         <div class="col-md-12">
           <div class="modal-box">

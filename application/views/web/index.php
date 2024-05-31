@@ -62,7 +62,7 @@
         </p>
       </div>
       <div class="col-md-5 center image">
-        <img src="<?php echo base_url(); ?>assets/images/about.png" alt="" />
+        <img src="<?php echo base_url(); ?>assets/images/about.png" alt="about_image" />
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@
       <div class="col-lg-4 col-md-6 mb-2">
         <div class="dest-col">
           <div class="dest-img">
-            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_1.webp" alt="" />
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_1.webp" alt="galler_img" />
           </div>
           <h3>Romance Special</h3>
 
@@ -120,7 +120,7 @@
       <div class="col-lg-4 col-md-6 mb-2">
         <div class="dest-col">
           <div class="dest-img">
-            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_2.webp" alt="" />
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_2.webp" alt="galler_img" />
           </div>
           <h3>Adventure Special</h3>
 
@@ -153,7 +153,7 @@
       <div class="col-lg-4 col-md-6">
         <div class="dest-col">
           <div class="dest-img">
-            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_3.webp" alt="" />
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_3.webp" alt="galler_img" />
           </div>
           <h3>Family Special</h3>
 
@@ -408,7 +408,7 @@
     <div class="col-xl-4">
       <div>
         <div class="travellers">
-          <img src="<?php echo base_url(); ?>assets/images/includes/locat_icon.png" alt="girl-icon">
+          <img src="<?php echo base_url(); ?>assets/images/includes/locat_icon.png" alt="location-icon">
         </div>
 
         <div class="collection">
@@ -421,7 +421,7 @@
     <div class="col-xl-4">
       <div>
         <div class="travellers">
-          <img src="<?php echo base_url(); ?>assets/images/includes/t_bag.png" alt="girl-icon">
+          <img src="<?php echo base_url(); ?>assets/images/includes/t_bag.png" alt="bag-icon">
         </div>
         <div class="collection">
 
@@ -601,7 +601,7 @@
         </div>
       </div>
       <div class="col-md-4 featur-image">
-        <img src="<?php echo base_url(); ?>assets/images/traveler.png" alt="" />
+        <img src="<?php echo base_url(); ?>assets/images/traveler.png" alt="girl_traveler" />
       </div>
       <div data-aos="fade-left" data-aos-duration="1500" class="col-md-4 featurecol feature-right">
         <div class="single-feature">

@@ -19,7 +19,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo base_url();?>assetsad\img\favicon.png" alt=""  />
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url();?>assets\images\favicon_2.png" alt=""  />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -70,7 +70,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo " style="height:100px;">
             <a href="<?php echo base_url()?>dashboard" class="app-brand-link">
-						<img src="<?php echo base_url(); ?>assetsad\img\andaman_logo.png" alt="logo_andaman" style="width:100%;">
+						<img src="<?php echo base_url(); ?>assets\images\logo_2.png" alt="logo_andaman" style="width:100%;">
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">

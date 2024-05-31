@@ -22,7 +22,7 @@
                 <p>Discover the breathtaking beauty of the Andaman Islands, a tropical paradise nestled in the Bay of Bengal. Renowned for their pristine beaches, crystal-clear waters, lush greenery, and vibrant marine life, the Andaman Islands are the perfect destination for travelers seeking both adventure and relaxation. Embark on an unforgettable Andaman holiday and explore the pristine beauty of these tropical islands, renowned for their crystal-clear waters, white sandy beaches, and lush greenery. Discover the rich history at Cellular Jail in Port Blair, dive into vibrant coral reefs while snorkeling or scuba diving in Havelock, and enjoy thrilling water sports, island hopping, and trekking adventures. Visit unique sites like Baratang's limestone caves and the picturesque ruins of Ross Island, all while soaking in the serene ambiance and stunning sunsets. With luxurious resorts, mid-range hotels, and budget-friendly guesthouses, Andaman offers a perfect escape for every traveler. Plan your dream vacation to the Andaman Islands today and experience paradise like never before.</p>
             </div>
             <div class="col-md-5 center image">
-                <img src="<?php echo base_url(); ?>assets/images/about.png" alt="">
+                <img src="<?php echo base_url(); ?>assets/images/about.png" alt="about_img">
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="abt_img">
-                <img src="<?php echo base_url(); ?>assets/images/about/340.jpg" alt="">
+                <img src="<?php echo base_url(); ?>assets/images/about/340.jpg" alt="our_mission">
             </div>
         </div>
         <div class="col-md-6">
@@ -53,14 +53,14 @@
         </div>
         <div class="col-md-6">
             <div class="abt_img">
-                <img src="<?php echo base_url(); ?>assets/images/about/844.jpg" alt="">
+                <img src="<?php echo base_url(); ?>assets/images/about/844.jpg" alt="our_vission">
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <div class="abt_img">
-                <img src="<?php echo base_url(); ?>assets/images/about/915.jpg" alt="">
+                <img src="<?php echo base_url(); ?>assets/images/about/915.jpg" alt="our_team">
             </div>
         </div>
         <div class="col-md-6">
@@ -89,17 +89,17 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="foot_img">
-                        <img src="<?php echo base_url(); ?>assets/images/about/2275.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/about/2275.jpg" alt="peoples_joy">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="foot_img">
-                        <img src="<?php echo base_url(); ?>assets/images/about/2293.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/about/2293.jpg" alt="beach_side">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="foot_img">
-                        <img src="<?php echo base_url(); ?>assets/images/about/3845.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/about/3845.jpg" alt="front_view">
                     </div>
                 </div>
 

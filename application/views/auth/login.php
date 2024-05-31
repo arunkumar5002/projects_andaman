@@ -28,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANDAMAN</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo base_url();?>assetsad/img/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url();?>assets/images/favicon_2.png" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -66,7 +66,7 @@
               <div class="app-brand justify-content-center">
                 <a href="<?php echo base_url();?>admin" class="app-brand-link gap-2">
                   <span class="app-brand-logo demo">
-                    <img src="<?php echo base_url(); ?>assetsad\img\andaman_logo.png" alt="logo_andaman" style="width:100%; height:80px">
+                    <img src="<?php echo base_url(); ?>assets\images\logo_2.png" alt="logo_andaman" style="width:100%; height:80px">
                   </span>
                  
                 </a>

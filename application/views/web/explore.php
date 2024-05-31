@@ -9,7 +9,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo base_url() ?>assets/images/slider/slide_7.jpg" alt="First slide" />
+                <img class="d-block w-100" src="<?php echo base_url() ?>assets/images/slider/slide_7.jpg" alt="First_slide" />
                 <div class="carousel-caption fvgb d-none d-md-block">
 
 
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo base_url() ?>assets/images/slider/slid_1.jpg" alt="First slide" />
+                <img class="d-block w-100" src="<?php echo base_url() ?>assets/images/slider/slid_1.jpg" alt="second_slide" />
                 <div class="carousel-caption fvgb d-none d-md-block">
 
 
@@ -25,7 +25,7 @@
             </div>
 
             <div class="carousel-item active">
-                <img class="d-block w-100" src="<?php echo base_url() ?>assets/images/slider/slid_2.jpg" alt="Third slide" />
+                <img class="d-block w-100" src="<?php echo base_url() ?>assets/images/slider/slid_2.jpg" alt="Third_slide" />
                 <div class="carousel-caption vdg-cur d-none d-md-block">
 
 
@@ -118,7 +118,7 @@
 
                 </div>
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/ride.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/ride.png" alt="rides">
                     <h5>Water Ride </h5>
 
                 </div>
@@ -127,12 +127,12 @@
             <div class="head_title inclusive">
 
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/map.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/map.png" alt="maps">
                     <h5>Pickup Drop</h5>
 
                 </div>
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/break.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/break.png" alt="breaks">
                     <h5>Breakfast</h5>
 
                 </div>
@@ -140,12 +140,12 @@
             <div class="head_title inclusive">
 
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/hotel.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/hotel.png" alt="hotels">
                     <h5>Hotel</h5>
 
                 </div>
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/cab.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/cab.png" alt="cab">
                     <h5>Cab Fesility</h5>
 
                 </div>
@@ -153,12 +153,12 @@
             <div class="head_title inclusive">
 
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/pair.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/pair.png" alt="paires">
                     <h5>SightSeeing</h5>
 
                 </div>
                 <div class="includes">
-                    <img src="<?php echo base_url() ?>assets/images/includes/person.png" alt="island">
+                    <img src="<?php echo base_url() ?>assets/images/includes/person.png" alt="persons">
                     <h5>Coordinator</h5>
 
                 </div>
