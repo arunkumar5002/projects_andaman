@@ -62,7 +62,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-3 glink">
+          <div class="col-md-3  col-sm-6 col-6 glink">
             <h2>Quick Links</h2>
             <ul>
               <li>
@@ -85,7 +85,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 glink">
+          <div class="col-md-3 col-sm-6 col-6 glink">
             <h2>Packages</h2>
             <ul>
               <li>
@@ -152,13 +152,15 @@
 
 
     </body>
-
-    <script src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
+    
+    <script src="assets/js/script.js"></script>
+    <script  type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script  type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/slider/js/owl.carousel.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
+
+    
 
 
     <!-- gallery -->
@@ -386,6 +388,13 @@
     </script>
 
 
+<!-- scroll_to_fix -->
 
+<script>
+	window.addEventListener("scroll", function () {
+		let header = document.querySelector("header");
+		header.classList.toggle("sticky", window.scrollY > 0);
+	});
+</script>
 
     </html>

@@ -1807,12 +1807,9 @@ footer .tags ul li {
 /* New_testimonial_styles */
 .testimonial-container {
 	position: relative;
-	
-	
+
 	overflow: hidden;
 	border-radius: 10px;
-	
-	
 }
 
 .testimonial {
@@ -1825,22 +1822,19 @@ footer .tags ul li {
 	box-sizing: border-box;
 	padding: 20px;
 	text-align: center;
-	
 }
 
 .test img {
 	border-radius: 50%;
 	border: 5px solid orange;
-	
-	height:250px;
+
+	height: 250px;
 	object-fit: cover;
 }
 
 .testimonial-text {
-	
 	margin: 20px 0;
 	color: #333;
-	
 }
 
 .client-name {
@@ -1852,7 +1846,7 @@ footer .tags ul li {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	
+
 	color: rgb(0, 54, 85);
 	border: none;
 	padding: 10px;
@@ -1865,25 +1859,43 @@ footer .tags ul li {
 .updown:hover {
 	color: orange;
 	font-size: 30px;
-	
 }
 
 .prev {
 	left: 90px;
-	
 }
 
 .next {
 	right: 90px;
-	
 }
 
-
-@media screen and (max-width:500px){
-	.prev{
+@media screen and (max-width: 500px) {
+	.prev {
 		left: 30px;
 	}
-	.next{
+	.next {
 		right: 30px;
 	}
 }
+
+/* scrool_to_fix */
+
+header {
+	position: fixed;
+
+	transition: 0.6s;
+
+	z-index: 9999;
+}
+
+header.sticky {
+	background: linear-gradient(1deg, #2273ba, #35bcde);
+	top: -11.5%;
+	
+}
+
+ .header-nav ul li a .sticky{
+	color: #000;
+ }
+
+ /* scrool_to_fix_end*/
