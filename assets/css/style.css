@@ -330,6 +330,9 @@ header .header-top {
 	padding: 3px;
 	background-color: white;
 }
+.logo img {
+	height: 90px;
+}
 @media screen and (max-width: 767px) {
 	header .header-top {
 		padding: 10px;
@@ -348,15 +351,13 @@ header .header-top .logo {
 	text-align: center;
 }
 
-.logo img{
-	height: 90px;
-}
+
 @media screen and (max-width: 767px) {
 	header .header-top .logo {
 		text-align: left;
 	}
 	header .header-top .logo img {
-		max-width: 125px;
+		height: 50px;
 	}
 }
 header .header-top .social-link {
@@ -429,8 +430,12 @@ header .small-menu {
 	color: #003046;
 	font-size: 1.2rem;
 	position: absolute;
-	right: 13px;
-	top: 3px;
+	right: 30px;
+	top: 9px;
+}
+
+.small-menu:hover{
+	color: #2fa1ff;
 }
 
 /* =================== Slider Style Starts Here =================== */
@@ -1637,6 +1642,12 @@ footer .tags ul li {
 	}
 	.chat_box {
 		bottom: 90px !important;
+		right: 5px !important;
+		padding: 8px !important;
+	}
+
+	.whatsup img{
+		height: 40px !important;
 	}
 }
 
@@ -1893,13 +1904,17 @@ header {
 }
 
 header.sticky {
-	background: linear-gradient(1deg, #2273ba, #35bcde);
-	top: -10.2%;
-	
+	background: linear-gradient(1deg, #2273ba, #35bcde) !important;
+	top: -10.2% !important;
 }
 
- .header-nav ul li a .sticky{
+.header-nav ul li a .sticky {
 	color: #000;
- }
+}
 
- /* scrool_to_fix_end*/
+@media screen and (max-width: 750px) {
+	.sticky {
+		display: none;
+	}
+}
+/* scrool_to_fix_end*/

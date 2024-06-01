@@ -17,8 +17,10 @@
 
 
 <div style="margin-top:0px;" class="row no-margin maping">
+    
+<iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d976.8409157838373!2d92.7335133696196!3d11.668618812673062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x308895a187650a7d%3A0x1756f237b0f27eba!2sMA%20Rd%2C%20Port%20Blair%2C%20Andaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1717221546251!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-    <iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670243.5656199255!2d94.07970187286692!3d11.578928461111452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3064a00f2b650ff3%3A0xce80055648fccb2c!2sAndaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1715594919235!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+ 
 
 
 </div>
@@ -40,9 +42,9 @@
                     <div class="contact_box mb-1">
 
                         <i class="fa-solid fa-location-dot" style="color:#36c2e1; font-size:30px; padding:10px;"></i>
-                        <b>Address</b>
+                        <b>Office Address</b>
 
-                        <p>04/52 North Mount road, Andaman Dt, Andaman Tk, Andaman State, Pin:23562.</p>
+                        <p>Shop No 11, Huda Masjid Complex, MA Road Phoenix Bay.</p>
 
                     </div>
 
