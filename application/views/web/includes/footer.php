@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-3 about">
             <h2>About Us</h2>
-            <a href="<?php echo base_url() ?>web"><img class="mb-3" style="background-color: aliceblue; padding: 8px; border-radius: 7px;" src="<?php echo base_url(); ?>assets/images/logo.png" alt="" /></a>
+            <a href="<?php echo base_url() ?>web"><img class="mb-3" style="background-color: aliceblue; padding: 2px; border-radius: 5px;" src="<?php echo base_url(); ?>assets/images/logo_2.png" alt="" /></a>
 
             <div class="foot-address">
               <div class="icon">

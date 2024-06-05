@@ -83,108 +83,114 @@
       </p>
     </div>
     <div class="dest-row row">
-      <div class="col-lg-4 col-md-6 mb-2">
+      <div class="col-lg-3 col-md-6 mb-2">
         <div class="dest-col">
-          <div class="dest-img">
+          <div class="dest-img  zoom-effect-1">
             <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_1.webp" alt="galler_img" />
+
+
+            <div class="dest-points text-center mt-3">
+              <h3 class="text-center">Romance Special</h3>
+
+
+              <div class="way_view">
+                <a href="">7 TOURS</a>
+              </div>
+
+
+            </div>
+
           </div>
-          <h3>Romance Special</h3>
 
 
-          <div class="dest-points mt-3">
-            <div class="dotes">
-              <i class="fa-regular fa-circle-dot" style="color: #616161da; font-size: 12px"></i>
-              <p class="mb-0">Stay with daily breakfast</p>
-            </div>
-            <div class="dotes mt-3">
-              <i class="fa-regular fa-circle-dot" style="color: #616161da; font-size: 12px"></i>
-              <p class="mb-0">Romantic dinner with 5 course meal and wine</p>
-            </div>
-
-          </div>
-          
 
 
-          <div class="callback">
-            <div class="call_phone">
-              <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
-            </div>
 
-            <div class=" view_more mt-3 mb-3">
-              <button onclick="window.location.href='<?php echo base_url() ?>web/romance_package'" class="btn-5">Request Callback</button>
-            </div>
-          </div>
-          
+
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-2">
+      <div class="col-lg-3 col-md-6 mb-2">
         <div class="dest-col">
-          <div class="dest-img">
+          <div class="dest-img  zoom-effect-1">
             <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_2.webp" alt="galler_img" />
-          </div>
-          <h3>Adventure Special</h3>
+            <div class="dest-points text-center mt-3">
+              <h3 class="text-center">Romance Special</h3>
 
 
-          <div class="dest-points mt-3">
-            <div class="dotes">
-              <i class="fa-regular fa-circle-dot" style="color: #616161da; font-size: 12px"></i>
-              <p class="mb-0">Stand Up Paddling on surf board</p>
-            </div>
-            <div class="dotes mt-3">
-              <i class="fa-regular fa-circle-dot" style="color: #616161da; font-size: 12px"></i>
-              <p class="mb-0">Snorkeling off the boat</p>
-            </div>
-
-          </div>
-
-         
-            <div class="callback">
-              <div class="call_phone">
-                <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
+              <div class="way_view">
+                <a href="">12 TOURS</a>
               </div>
 
-              <div class=" view_more mt-3 mb-3">
-                <button onclick="window.location.href='<?php echo base_url() ?>web/adventure_package'" class="btn-5">Request Callback</button>
-              </div>
-             
+
             </div>
+          </div>
+
+
+
+
+
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="dest-col">
-          <div class="dest-img">
+          <div class="dest-img  zoom-effect-1">
             <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_3.webp" alt="galler_img" />
-          </div>
-          <h3>Family Special</h3>
+            <div class="dest-points text-center mt-3">
+            <h3 class="text-center">Romance Special</h3>
 
 
-          <div class="dest-points mt-3">
-            <div class="dotes">
-              <i class="fa-regular fa-circle-dot" style="color: #616161da; font-size: 12px"></i>
-              <p class="mb-0">Tree walk, Beach Volleyball</p>
-            </div>
-            <div class="dotes mt-3">
-              <i class="fa-regular fa-circle-dot" style="color: #616161da; font-size: 12px"></i>
-              <p class="mb-0">Sundowner at our Dugong Dugon Bar</p>
+            <div class="way_view">
+              <a href="">10 TOURS</a>
             </div>
 
+
           </div>
+
+          </div>
+
          
-            <div class="callback">
-              <div class="call_phone">
-                <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
-              </div>
 
-              <div class=" view_more mt-3 mb-3">
-                <button onclick="window.location.href='<?php echo base_url() ?>web/family_package'" class="btn-5">Request Callback</button>
-              </div>
-              
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="dest-col">
+          <div class="dest-img  zoom-effect-1">
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_3.webp" alt="galler_img" />
+            <div class="dest-points text-center mt-3">
+            <h3 class="text-center">Romance Special</h3>
+
+
+            <div class="way_view">
+              <a href="">11 TOURS</a>
             </div>
+
+
+          </div>
+          </div>
+
+         
+
+
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- request_call_back button -->
+
+<div class="callback">
+  <div class="call_phone">
+    <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
+  </div>
+
+  <div class=" view_more mt-3 mb-3">
+    <button onclick="window.location.href='<?php echo base_url() ?>web/family_package'" class="btn-5">Request Callback</button>
+  </div>
+
+</div>
+
+
+<!-- request_call_back button -->
 
 
 
@@ -654,9 +660,9 @@
       <?php endforeach; ?>
     </div>
   </div>
- 
-<div class=" view_more mt-3  mb-3">
-  <a href="<?php echo base_url() ?>web/blog"> <button style="width: 150px;" class="btn-5">View Our Blog</button></a>
-</div>
+
+  <div class=" view_more mt-3  mb-3">
+    <a href="<?php echo base_url() ?>web/blog"> <button style="width: 150px;" class="btn-5">View Our Blog</button></a>
+  </div>
 
 </div>

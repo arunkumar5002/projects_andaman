@@ -351,7 +351,6 @@ header .header-top .logo {
 	text-align: center;
 }
 
-
 @media screen and (max-width: 767px) {
 	header .header-top .logo {
 		text-align: left;
@@ -434,7 +433,7 @@ header .small-menu {
 	top: 9px;
 }
 
-.small-menu:hover{
+.small-menu:hover {
 	color: #2fa1ff;
 }
 
@@ -535,6 +534,7 @@ header .small-menu {
 .destinations .dest-row .dest-col .dest-img {
 	padding: 10px;
 	border: 1px solid #ccc;
+	position: relative;
 }
 .destinations .dest-row .dest-col h3 {
 	font-size: 1.6rem;
@@ -564,15 +564,56 @@ header .small-menu {
 }
 
 .dest-points {
-	text-align: justify;
+	position: absolute;
+	left: 10%;
+	top: 45%;
 }
+
+.dest-points h3{
+	color: white;
+}
+
+
+.zoom-effect-1{
+	overflow: hidden;
+}
+
+.zoom-effect-1 img{
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	transition: all .4s linear;
+}
+
+.zoom-effect-1:hover img{
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+
 
 .dest-points .dotes {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 12px;
 }
 
+.way_view {
+	display: flex;
+	justify-content: center;
+}
+
+.way_view a {
+	font-weight: 700;
+	font-size: 18px;
+	color: white;
+
+	background-color: rgb(214, 164, 0);
+	padding: 8px 30px 8px 30px;
+}
+
+.way_view a:hover {
+	background-color: #14863d;
+}
 /* =================== Key Features Starts Here =================== */
 .features {
 	padding: 50px;
@@ -1646,7 +1687,7 @@ footer .tags ul li {
 		padding: 8px !important;
 	}
 
-	.whatsup img{
+	.whatsup img {
 		height: 40px !important;
 	}
 }
@@ -1905,7 +1946,7 @@ header {
 
 header.sticky {
 	background: linear-gradient(1deg, #2273ba, #35bcde) !important;
-	top: -10.2% !important;
+	top: -10.8% !important;
 }
 
 .header-nav ul li a .sticky {
