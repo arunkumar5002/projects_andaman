@@ -22,10 +22,10 @@
             <label class="form-label" for="formValidationName">Package category</label>
             <select class="form-select" name="package_title" id="exampleFormControlSelect1" aria-label="Default select example">
             <option selected="">Select Category</option>
-            <option name="package_title" value="Family package">Family package</option>
-            <option name="package_title" value="Adventure package">Adventure package</option>
-            <option name="package_title" value="Romance package">Romance package</option>
-			<option name="package_title" value="Holiday package">Holiday package</option>
+            <option name="package_title" value="Familypackage">Family package</option>
+            <option name="package_title" value="Adventurepackage">Adventure package</option>
+            <option name="package_title" value="Romancepackage">Romance package</option>
+			<option name="package_title" value="studentpackage">Student package</option>
           </select>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
@@ -57,7 +57,7 @@
 		  
 		  <div class="col-12">
             <label class="form-label" for="bootstrap-maxlength-example2">Day Plans</label>
-            <textarea id="file-picker" name="day_plans" class="form-control bootstrap-maxlength-example" rows="5"></textarea>
+			<input class="form-control" type="text" id="formValidationFile" name="day_plans">
           </div>
 		 
 		  <div class="col-12">

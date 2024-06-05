@@ -45,17 +45,30 @@
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
 
-                <p class="topics"><?php echo $pac->package_title; ?></p>
+                <p class="topics"><?php echo $pac->day_plans; ?></p>
 
 
                 <p style="font-size: 13px;"><?php echo $pac->package_content; ?></p>
 
 
             </div>
+			
+			<!-- request_call_back button -->
 
-            <div class="booking">
-                <a class="now" href="<?php echo base_url('web/explore/' . $pac->id) ?>">View More</a>
-            </div>
+<div class="callback">
+  <div class="call_phone">
+    <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
+  </div>
+
+  <div class=" view_more mt-3 mb-3">
+    <button onclick="window.location.href='<?php echo base_url('web/explore/' . $pac->id) ?>'" class="btn-5">Request Callback</button>
+  </div>
+
+</div>
+
+
+<!-- request_call_back button -->
+
 
 
 

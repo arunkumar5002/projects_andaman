@@ -73,24 +73,20 @@ class Web_model extends CI_Model
     return $query->result();
    }
 
-     public function package_adventure() {
-        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'adventure package' AND status = 1");
-      return $query->result();
+    public function get_package_by_title($package_title) {
+        $this->db->select('*');
+        $this->db->from('pa_package');
+        $this->db->where('package_title', $package_title);
+        $this->db->where('status', 1);
+        $query = $this->db->get();
+        return $query->result();
     }
+	
+	public function package_list(){
+    $query = $this->db->query("SELECT package_title, COUNT(id) as package_count, image FROM pa_package WHERE status = 1 GROUP BY package_title LIMIT 4");
+    return $query->result();
+   }
 
-     public function package_romance() {
-        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'romance package' AND status = 1");
-      return $query->result();
-    }
 
-     public function package_holiday() {
-        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'holiday package' AND status = 1");
-      return $query->result();
-    }
 
-     public function package_family() {
-        $query = $this->db->query("SELECT * FROM pa_package WHERE package_title = 'family package' AND status = 1");
-      return $query->result();
-    }
-   
 }	

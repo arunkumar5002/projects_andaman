@@ -18,6 +18,7 @@ class Web extends CI_Controller{
 		
     $data['banner'] = $this->banner_model->get_list();
 	$data['blog'] = $this->web_model->blog_list();
+	$data['packages'] = $this->web_model->package_list();
 	/* echo"<pre>";
 	print_r($data['banner']);
 	exit(); */
@@ -27,37 +28,40 @@ class Web extends CI_Controller{
 
 	
 	public function about_us(){
-
+        $data['packages'] = $this->package_model->package_list();
         $data['content'] = "web/about_us";
         $this->load->view('web/template', $data);
     }
 	
 	public function destinations(){
         $data['package'] = $this->package_model->get_list();
+		$data['packages'] = $this->package_model->package_list();
         $data['content'] = "web/destinations";
         $this->load->view('web/template', $data);
     }
 	
 	public function blog(){
         $data['blog'] = $this->blog_model->get_list();
+		$data['packages'] = $this->package_model->package_list();
         $data['content'] = "web/blog";
         $this->load->view('web/template', $data);
     }
 	
 	public function gallery(){
         $data['gallery'] = $this->gallery_model->get_list();
+		$data['packages'] = $this->package_model->package_list();
         $data['content'] = "web/gallery";
         $this->load->view('web/template', $data);
     }
 	
 	public function contact_us(){
-
+        $data['packages'] = $this->package_model->package_list();
         $data['content'] = "web/contact_us";
         $this->load->view('web/template', $data);
     }
 	
 	public function explore($id){
-
+        $data['packages'] = $this->package_model->package_list();
         $data['package'] = $this->web_model->get_package_by_id($id);
         $data['plans'] = $this->web_model->get_plans_by_package_id($id);
 
@@ -67,10 +71,12 @@ class Web extends CI_Controller{
         $this->load->view('web/template', $data);
     }
 	
-	public function adventure_package(){
+	 public function package_list($package_title) {
+        $package_title = urldecode($package_title);
 
-        $data['package'] = $this->web_model->package_adventure();
-
+        $data['package'] = $this->web_model->get_package_by_title($package_title);
+        $data['packages'] = $this->package_model->package_list();
+     
         $data['content'] = "web/destinations";
         $this->load->view('web/template', $data);
     }

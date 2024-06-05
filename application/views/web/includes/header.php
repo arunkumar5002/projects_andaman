@@ -79,15 +79,11 @@
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
             <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
               <ul class="drop_list">
+               <?php foreach ($packages as $menu): ?>
+                <li><a href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($menu->package_title); ?>"><?php echo $menu->package_title; ?></a></li>
+                
 
-                <li><a href="<?php echo base_url() ?>web/adventure_package">Advanchere Special</a></li>
-                <li><a href="<?php echo base_url() ?>web/romance_package">Romance Special</a></li>
-                <li><a href="<?php echo base_url() ?>web/holiday_package">Holiday Special</a></li>
-
-                <li><a href="<?php echo base_url() ?>web/family_package">Family Special</a></li>
-                <!-- <li><a href="<?php echo base_url() ?>web/water_rides">Water Rides</a></li> --->
-
-
+             <?php endforeach; ?>
               </ul>
             </li>
             <li><a href="<?php echo base_url() ?>web/blog">Blog</a></li>

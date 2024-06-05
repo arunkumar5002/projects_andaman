@@ -60,11 +60,16 @@ class Package_model extends CI_Model
     $sql = "UPDATE pa_package SET package_content = ?,package_cost = ?, adult = ?,child = ?,day_plans = ?,package_inclusion = ?,package_exclusions = ? WHERE id = ?";
     
     $this->db->query($sql, array($package_content, $package_cost, $adult, $child, $day_plans, $package_inclusion, $package_exclusions, $id));
-}
+    }
 
 	public function delete_package($id){
 		
 		$this->db->query("UPDATE  pa_package SET status = 0 Where id='$id'");
+	}
+	
+	public function package_list(){
+		$query = $this->db->query("SELECT DISTINCT package_title FROM pa_package WHERE status = 1");
+		return $query->result();
 	}
 
 	
