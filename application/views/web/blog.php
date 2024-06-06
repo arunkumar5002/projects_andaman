@@ -26,7 +26,7 @@
 				<?php foreach ($blog as $row): ?>
                     <div class="col-lg-4 col-md-6 ">
                        <div class="blog-col">
-                            <img src="<?php echo base_url('site/blog/' . $row->image); ?>" style="object-fit:cover; width:100%; height:300px;" alt="blog_andaman">
+                            <img src="<?php echo base_url('site/blog/' . $row->image); ?> "alt="blog_andaman">
                             <h4><?php echo $row->name; ?></h4>
                             <p><?php echo $row->content; ?></p>
                        </div>

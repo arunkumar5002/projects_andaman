@@ -561,32 +561,29 @@ header .small-menu {
 	color: white;
 }
 
-.dest-points {
-	position: absolute;
-	left: 10%;
-	top: 45%;
-}
 
-.dest-points h3{
+
+
+
+
+.dest-points h4 {
 	color: white;
 }
 
-
-.zoom-effect-1{
+.zoom-effect-1 {
 	overflow: hidden;
 }
 
-.zoom-effect-1 img{
+.zoom-effect-1 img {
 	transform: scale(1);
 	-webkit-transform: scale(1);
-	transition: all .4s linear;
+	transition: all 0.4s linear;
 }
 
-.zoom-effect-1:hover img{
+.zoom-effect-1:hover img {
 	transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 }
-
 
 .dest-points .dotes {
 	display: flex;
@@ -602,11 +599,12 @@ header .small-menu {
 
 .way_view a {
 	font-weight: 700;
-	font-size: 18px;
+	font-size: 15px;
 	color: white;
+	width: 280px;
 
 	background-color: rgb(214, 164, 0);
-	padding: 8px 30px 8px 30px;
+	padding: 8px 15px 8px 15px;
 }
 
 .way_view a:hover {
@@ -911,7 +909,9 @@ header .small-menu {
 }
 .blog .blog-row .blog-col img {
 	margin-bottom: 20px;
-	width: 100%;
+	width: 500px;
+	height: 280px;
+	object-fit: cover;
 }
 .blog .blog-row .blog-col span {
 	color: #a09f9f;
@@ -1109,6 +1109,32 @@ footer .tags ul li {
 	margin-bottom: 30px;
 }
 
+.front_size {
+	height: 300px !important;
+	width: 350px !important;
+	object-fit: cover !important;
+}
+
+@media screen and (max-width: 750px) {
+	.front_size {
+		height: 200px !important;
+		width: 300px !important;
+		object-fit: cover !important;
+	}
+}
+
+#baguetteBox-overlay .full-image img {
+	height: 280px !important;
+	width: 300px !important;
+	object-fit: cover !important;
+}
+
+@media screen and (max-width: 750px) {
+	#baguetteBox-overlay .full-image img {
+		height: 230px !important;
+	}
+}
+
 /* ===================================== Responsive Style CSS ==================================== */
 @media screen and (max-width: 991px) {
 	.we-are-making .text-part {
@@ -1161,6 +1187,9 @@ footer .tags ul li {
 
 .packages img {
 	border-radius: 10px 10px 0px 0px;
+	height: 290px;
+	width: 350px;
+	object-fit: cover;
 }
 
 .packages:hover {
@@ -1935,11 +1964,11 @@ footer .tags ul li {
 /* scrool_to_fix */
 
 header {
-	position: fixed;
+	position: fixed !important;
 
-	transition: 0.6s;
+	transition: 0.6s !important;
 
-	z-index: 9999;
+	z-index: 9999 !important;
 }
 
 header.sticky {
@@ -1953,7 +1982,7 @@ header.sticky {
 
 @media screen and (max-width: 750px) {
 	.sticky {
-		display: none;
+		display: none !important;
 	}
 }
 /* scrool_to_fix_end*/

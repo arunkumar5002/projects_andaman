@@ -82,27 +82,29 @@
         "Discover the magic of your dream destination with our all-inclusive holiday package every detail crafted for an unforgettable adventure and ultimate relaxation."
       </p>
     </div>
-   <div class="dest-row row">
-    <?php foreach ($packages as $pack): ?>
+    <div class="dest-row row">
+      <?php foreach ($packages as $pack) : ?>
         <div class="col-lg-3 col-md-6 mb-2">
-            <div class="dest-col">
-                <div class="dest-img zoom-effect-1">
-                    
-                        <img src="<?php echo base_url('site/package/' . $pack->image); ?>" style="height: 200px; object-fit: cover;" alt="package_image" />
-                    
+          <div class="dest-col">
+            <div class="dest-img zoom-effect-1">
 
-                    <div class="dest-points text-center">
-                        <h3 class="text-center"><?php echo $pack->package_title; ?></h3>
+              <img src="<?php echo base_url('site/package/' . $pack->image); ?>" style="height: 200px; object-fit: cover;" alt="package_image" />
 
-                        <div class="way_view">
-                            <a href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($pack->package_title); ?>"><?php echo $pack->package_count; ?> TOURS</a>
-                        </div>
-                    </div>
+
+              <div class="dest-points text-center mt-3">
+
+                <div class="way_view">
+                  <a href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($pack->package_title); ?>"><?php echo $pack->package_count; ?> TOURS <h4 class="way_view"><?php echo $pack->package_title; ?></h4>
+                  </a>
+
+
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    <?php endforeach; ?>
-</div>
+      <?php endforeach; ?>
+    </div>
 
   </div>
 </div>
