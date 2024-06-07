@@ -566,8 +566,9 @@ header .small-menu {
 
 
 
-.dest-points h4 {
+.dest-points h5 {
 	color: white;
+	font-size: 18px;
 }
 
 .zoom-effect-1 {
@@ -1045,8 +1046,7 @@ footer .tags ul li {
 	text-align: center;
 }
 
-.gallery-filter .btn {
-}
+
 
 .gallery {
 	padding: 50px;
