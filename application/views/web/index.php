@@ -428,40 +428,50 @@
   <h2>Testimonital</h2>
 </div>
 
-<div class="container mb-5">
 
+<div class="container  mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <div class="test">
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_12.webp" alt="Client 1" />
+            <p class="client-name  mt-3">- Janidan</p>
+            <p class="testimonial-text">
+              "Our Andaman tour was an unforgettable experience! The beaches were pristine,<br> and the tour guides were fantastic."
+            </p>
 
-  <div class="testimonial-container">
-    <div class="testimonial">
-      <div class="test">
-        <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_12.webp" alt="Client 1" />
-        <p class="client-name  mt-3">- Janidan</p>
-        <p class="testimonial-text">
-          "Our Andaman tour was an unforgettable experience! The beaches were pristine,<br> and the tour guides were fantastic."
-        </p>
+          </div>
+          <div class="test">
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_10.webp" alt="Client 2" />
+            <p class="client-name  mt-3">- Jack Daniyal</p>
+            <p class="testimonial-text">
+              "We had a wonderful time exploring the Andaman Islands. The service was <br>excellent and everything was perfectly organized."
+            </p>
 
-      </div>
-      <div class="test">
-        <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_10.webp" alt="Client 2" />
-        <p class="client-name  mt-3">- Jack Daniyal</p>
-        <p class="testimonial-text">
-          "We had a wonderful time exploring the Andaman Islands. The service was <br>excellent and everything was perfectly organized."
-        </p>
+          </div>
+          <div class="test">
+            <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_9.webp" alt="Client 3" />
+            <p class="client-name mt-3">- Stalin</p>
+            <p class="testimonial-text">
+              "The beauty of the Andaman Islands left us speechless. The tour package offered<br> great value and covered all the must-see spots."
+            </p>
 
-      </div>
-      <div class="test">
-        <img src="<?php echo base_url(); ?>assets/images/gallery/gallery_9.webp" alt="Client 3" />
-        <p class="client-name mt-3">- Stalin</p>
-        <p class="testimonial-text">
-          "The beauty of the Andaman Islands left us speechless. The tour package offered<br> great value and covered all the must-see spots."
-        </p>
+          </div>
 
+        </div>
+
+        <i class=" prev updown fa-solid fa-angle-left"></i>
+        <i class=" next updown fa-solid fa-chevron-right"></i>
       </div>
 
     </div>
 
-    <i class=" prev updown fa-solid fa-angle-left"></i>
-    <i class=" next updown fa-solid fa-chevron-right"></i>
+    <div class="col-md-6 frames">
+      <video style="width: 100%; height: 450px; border-radius: 50px;" controls autoplay muted>
+        <source src=".//assets/images/testimonial_video.mp4" type="video/mp4" />
+      </video>
+    </div>
   </div>
 </div>
 
@@ -470,9 +480,7 @@
 
 
 
-
 <!--*************** Testimonial  end Here *************** -->
-
 
 
 
@@ -553,6 +561,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
 
 <!--*************** Blog Starts Here ***************-->
 
