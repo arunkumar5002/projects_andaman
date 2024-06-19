@@ -42,18 +42,18 @@
   </div>
   <!-- / Content -->
 </div>
+<script src="https://cdn.tiny.cloud/1/xlfeurntq9y7i4xekogr2t4bmyapgkvf5omt3qefzg3qda4b/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script> 
 
-<script src="https://cdn.tiny.cloud/1/xlfeurntq9y7i4xekogr2t4bmyapgkvf5omt3qefzg3qda4b/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
 <script>
         // Function to initialize TinyMCE
-        function initTinyMCE(selector) {
+         function initTinyMCE(selector) {
             tinymce.init({
                 selector: selector,
                 plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
                 toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
             });
-        }
+        } 
 
         initTinyMCE('.tinymce');
 

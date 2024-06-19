@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Web_model extends CI_Model
 {
 
-	public function save_enquiry($fullname,$mobile_no,$email,$location,$status)
+	public function save_enquiry($fullname,$mobile_no,$email,$location,$people,$date,$vacation_type,$status)
 	{
 
 		$enquiry_data = array(
@@ -12,6 +12,9 @@ class Web_model extends CI_Model
 			'mobile_no' => $mobile_no,
 			'email' => $email,
 			'location' => $location,
+			'people' => $people,
+			'date' => $date,
+			'vacation_type' => $vacation_type,
 			'status' => $status
 		);
 
@@ -82,11 +85,18 @@ class Web_model extends CI_Model
         return $query->result();
     }
 	
-	public function package_list(){
-    $query = $this->db->query("SELECT package_title, COUNT(id) as package_count, image FROM pa_package WHERE status = 1 GROUP BY package_title LIMIT 4");
+   public function package_list(){
+    $query = $this->db->query("
+        SELECT p.package_title, COUNT(p.id) as package_count, p.image, c.category_name 
+        FROM pa_package p
+        JOIN pa_create_package c ON p.package_title = c.id 
+        WHERE p.status = 1
+        GROUP BY p.package_title, c.category_name
+        LIMIT 4
+    ");
     return $query->result();
-   }
+  }
 
-
+   
 
 }	

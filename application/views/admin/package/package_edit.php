@@ -35,6 +35,21 @@
             <input class="form-control" type="file" id="formValidationFile" name="image">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
+		  <div class="col-6">
+            <label class="form-label" for="bootstrap-maxlength-example2">Package Title</label>
+			<input class="form-control" type="text" id="formValidationFile" name="package_heading" value="<?php echo isset($package) ? $package->package_heading : '' ?>">
+          </div>
+		  
+		  <div class="col-6">
+            <label class="form-label" for="bootstrap-maxlength-example2">Day Plans</label>
+			<input class="form-control" type="text" id="formValidationFile" name="day_plans" value="<?php echo isset($package) ? $package->day_plans : '' ?>">
+          </div>
+		  
+		  <div class="col-12">
+            <label class="form-label" for="bootstrap-maxlength-example2">Place To Destination</label>
+			<input class="form-control" type="text" id="formValidationFile" name="place" value="<?php echo isset($package) ? $package->place : '' ?>">
+          </div>
+		  
           <div class="col-md-12 fv-plugins-icon-container">
             <label class="form-label" for="formValidationEmail">Package Content</label>
             <textarea id="bootstrap-maxlength-example2" name="package_content" class="form-control bootstrap-maxlength-example" rows="5"><?php echo isset($package) ? $package->package_content : '' ?></textarea>
@@ -43,6 +58,11 @@
 		  <div class="col-md-6 fv-plugins-icon-container">
             <label for="formValidationFile" name="image" class="form-label">Package Cost</label>
             <input class="form-control" type="number" id="formValidationFile" name="package_cost" value="<?php echo isset($package) ? $package->package_cost : '' ?>">
+          <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+		  
+		  <div class="col-md-3 fv-plugins-icon-container">
+            <label for="formValidationFile" name="image" class="form-label">Package MRP Price</label>
+            <input class="form-control" type="number" id="formValidationFile" name="package_price" value="<?php echo isset($package) ? $package->package_price : '' ?>">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-3 fv-plugins-icon-container">
@@ -56,10 +76,6 @@
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  
-		  <div class="col-12">
-            <label class="form-label" for="bootstrap-maxlength-example2">Day Plans</label>
-			<input class="form-control" type="text" id="formValidationFile" name="day_plans" value="<?php echo isset($package) ? $package->day_plans : '' ?>">
-          </div>
 		 
 		  <div class="col-12">
             <label class="form-label" for="bootstrap-maxlength-example2">Package Inclusions</label>        

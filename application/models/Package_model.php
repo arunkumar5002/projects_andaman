@@ -3,17 +3,29 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Package_model extends CI_Model
 {
+	
+	public function create_package($Category_name,$status){
+		$package_data = array(
+			'Category_name' => $Category_name,
+			'status' => $status
+		);
 
-	public function save_package($package_title,$package_content,$package_cost,$adult,$child,$day_plans,$package_inclusion,$package_exclusions,$source,$image_bundle,$status)
+		$this->db->insert('pa_create_package', $package_data);
+	}
+
+	public function save_package($package_title,$package_content,$package_cost,$package_price,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions,$source,$image_bundle,$status)
 	{
 
 		$package_data = array(
 			'package_title' => $package_title,
 			'package_content' => $package_content,
 			'package_cost' => $package_cost,
+			'package_price' => $package_price,
 			'adult' => $adult,
 			'child' => $child,
 			'day_plans' => $day_plans,
+			'package_heading' => $package_heading,
+			'place' => $place,
 			'package_inclusion' => $package_inclusion,
 			'package_exclusions' => $package_exclusions,
 			'image' => $source,
@@ -29,6 +41,11 @@ class Package_model extends CI_Model
 	public function get_list(){
 		
 		$query = $this->db->query("SELECT * FROM pa_package WHERE status = 1");
+		return $query->result();
+	}
+	
+	public function create_list(){
+		$query = $this->db->query("SELECT * FROM pa_create_package WHERE status = 1");
 		return $query->result();
 	}
 	
@@ -56,10 +73,10 @@ class Package_model extends CI_Model
 		return $result->row();
 	}
 	
-	public function update_package( $package_content, $package_cost, $adult, $child, $day_plans, $package_inclusion, $package_exclusions, $id) {
-    $sql = "UPDATE pa_package SET package_content = ?,package_cost = ?, adult = ?,child = ?,day_plans = ?,package_inclusion = ?,package_exclusions = ? WHERE id = ?";
+	public function update_package( $package_content, $package_cost, $adult, $child, $day_plans,$package_heading,$place, $package_inclusion, $package_exclusions, $id) {
+    $sql = "UPDATE pa_package SET package_content = ?,package_cost = ?, adult = ?,child = ?,day_plans = ?,package_heading = ?,place = ?,package_inclusion = ?,package_exclusions = ? WHERE id = ?";
     
-    $this->db->query($sql, array($package_content, $package_cost, $adult, $child, $day_plans, $package_inclusion, $package_exclusions, $id));
+    $this->db->query($sql, array($package_content, $package_cost, $adult, $child, $day_plans,$package_heading,$place, $package_inclusion, $package_exclusions, $id));
     }
 
 	public function delete_package($id){
@@ -67,10 +84,15 @@ class Package_model extends CI_Model
 		$this->db->query("UPDATE  pa_package SET status = 0 Where id='$id'");
 	}
 	
-	public function package_list(){
+	/* public function package_list(){
 		$query = $this->db->query("SELECT DISTINCT package_title FROM pa_package WHERE status = 1");
 		return $query->result();
-	}
+	} */
+	
+	public function get_packages() {
+    $query = $this->db->get('pa_create_package'); // Make sure 'packages' table has 'id' column
+    return $query->result();
+}
 
 	
 }	

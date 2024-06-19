@@ -11,9 +11,23 @@ class Package extends CI_Controller{
     }
 	
 	public function index(){
-		
+		$data['package'] = $this->package_model->create_list();
 		$data['content'] = 'admin/package/package_create';
 		$this->load->view('admin/template',$data);
+	}
+	
+	public function package_create(){			
+		$data['content'] = 'admin/package/package_name';
+		$this->load->view('admin/template',$data);
+	}
+	
+	public function save_create_package(){
+		$Category_name = $this->input->post('Category_name');
+		$status = 1;
+		
+		$this->package_model->create_package($Category_name,$status);
+	    redirect('package');
+		
 	}
 	
 	public function package_save(){
@@ -21,9 +35,12 @@ class Package extends CI_Controller{
 		$package_title = $this->input->post('package_title');
 		$package_content = $this->input->post('package_content');
 		$package_cost = $this->input->post('package_cost');
+		$package_price = $this->input->post('package_price');
 		$adult = $this->input->post('adult');
 		$child = $this->input->post('child');
 		$day_plans = $this->input->post('day_plans');
+		$package_heading = $this->input->post('package_heading');
+		$place = $this->input->post('place');
 		$package_inclusion = $this->input->post('package_inclusion');
 		$package_exclusions = $this->input->post('package_exclusions');
 		$status = 1;
@@ -75,7 +92,7 @@ class Package extends CI_Controller{
 	  // exit();
 	   
 	   $this->load->model('package_model');
-	   $this->package_model->save_package($package_title,$package_content,$package_cost,$adult,$child,$day_plans,$package_inclusion,$package_exclusions,$source,$image_bundle,$status);
+	   $this->package_model->save_package($package_title,$package_content,$package_cost,$package_price,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions,$source,$image_bundle,$status);
 	   redirect('package/package_list');
 	}
 	
@@ -109,7 +126,7 @@ class Package extends CI_Controller{
    }
    
    public function package_edit($id){
-		
+		$data['package'] = $this->package_model->create_list();
 		$data['package'] = $this->package_model->edit_package($id);
         $data['content'] = "admin/package/package_edit";
         $this->load->view('admin/template', $data);
@@ -122,11 +139,13 @@ class Package extends CI_Controller{
 		$adult = $this->input->post('adult');
 		$child = $this->input->post('child');
 		$day_plans = $this->input->post('day_plans');
+		$package_heading = $this->input->post('package_heading');
+		$place = $this->input->post('place');
 		$package_inclusion = $this->input->post('package_inclusion');
 		$package_exclusions = $this->input->post('package_exclusions');
 
 
-        $this->package_model->update_package($package_content,$package_cost,$adult,$child,$day_plans,$package_inclusion,$package_exclusions, $id);
+        $this->package_model->update_package($package_content,$package_cost,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions, $id);
 
         redirect('package/package_list');
 	}

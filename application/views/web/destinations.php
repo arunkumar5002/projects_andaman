@@ -36,7 +36,7 @@
 
 <div class="container mb-5">
     <div class="row">
-	<?php foreach ($package as $pac):?>
+	<?php foreach ($packages as $pac):?>
         <div class="col-xl-4 mt-3">
 
             <div class="packages">
@@ -45,10 +45,10 @@
 
             <div class="mb-3 mt-3" style="margin-left: 10px;">
 
-                <p class="topics"><?php echo $pac->day_plans; ?></p>
+                <p class="topics"><?php echo $pac->package_heading; ?></p>
 
 
-                <p style="font-size: 13px;"><?php echo $pac->package_content; ?></p>
+                <p style="font-size: 13px;"><?php echo $pac->day_plans; ?></p>
 
 
             </div>

@@ -54,6 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'admin';
+//$route['web/package_list/(:any)'] = 'web/package_list/$1';
+
 
 
 

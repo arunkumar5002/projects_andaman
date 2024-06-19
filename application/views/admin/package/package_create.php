@@ -19,13 +19,14 @@
 
 
           <div class="col-md-6 fv-plugins-icon-container">
-            <label class="form-label" for="formValidationName">Package category</label>
+            <label class="form-label" for="formValidationName">Select Package</label>
             <select class="form-select" name="package_title" id="exampleFormControlSelect1" aria-label="Default select example">
             <option selected="">Select Category</option>
-            <option name="package_title" value="Familypackage">Family package</option>
-            <option name="package_title" value="Adventurepackage">Adventure package</option>
-            <option name="package_title" value="Romancepackage">Romance package</option>
-			<option name="package_title" value="studentpackage">Student package</option>
+			<?php $i = 1;
+                   foreach ($package as $row):
+			?>
+            <option name="package_title" value="<?php echo $row->id?>"><?php echo $row->category_name?></option>
+            <?php endforeach; ?>
           </select>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
@@ -34,14 +35,34 @@
             <input class="form-control" type="file" id="formValidationFile" name="image">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
+		  <div class="col-6">
+            <label class="form-label" for="bootstrap-maxlength-example2">Package Title</label>
+			<input class="form-control" type="text" id="formValidationFile" name="package_heading">
+          </div>
+		  
+		  <div class="col-6">
+            <label class="form-label" for="bootstrap-maxlength-example2">Day Plans</label>
+			<input class="form-control" type="text" id="formValidationFile" name="day_plans">
+          </div>
+		  
+		  <div class="col-12">
+            <label class="form-label" for="bootstrap-maxlength-example2">Place To Destination</label>
+			<input class="form-control" type="text" id="formValidationFile" name="place">
+          </div>
+		  
           <div class="col-md-12 fv-plugins-icon-container">
             <label class="form-label" for="formValidationEmail">Package Content</label>
             <textarea id="bootstrap-maxlength-example2" name="package_content" class="form-control bootstrap-maxlength-example" rows="5" ></textarea>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
-		  <div class="col-md-6 fv-plugins-icon-container">
+		  <div class="col-md-3 fv-plugins-icon-container">
             <label for="formValidationFile" name="image" class="form-label">Package Cost</label>
             <input class="form-control" type="number" id="formValidationFile" name="package_cost">
+          <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+		  
+		  <div class="col-md-3 fv-plugins-icon-container">
+            <label for="formValidationFile" name="image" class="form-label">Package MRP Price</label>
+            <input class="form-control" type="number" id="formValidationFile" name="package_price">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-3 fv-plugins-icon-container">
@@ -53,12 +74,6 @@
             <label for="formValidationFile" name="child" class="form-label">Child(above 5 years)</label>
             <input class="form-control" type="number" id="formValidationFile" name="child">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
-		  
-		  
-		  <div class="col-12">
-            <label class="form-label" for="bootstrap-maxlength-example2">Day Plans</label>
-			<input class="form-control" type="text" id="formValidationFile" name="day_plans">
-          </div>
 		 
 		  <div class="col-12">
             <label class="form-label" for="bootstrap-maxlength-example2">Package Inclusions</label>        

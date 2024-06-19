@@ -33,9 +33,13 @@ class Gallery_model extends CI_Model
 	}
 	
 	public function update_gallery($name,$content,$source,$status, $id){
-		
+		if(!empty($source)){
+		$sql = "update pa_gallery SET name = '$name', content = '$content',image = '$source' where id = '$id'";
+		$result = $this->db->query($sql);
+		}else{		
 		$sql = "update pa_gallery SET name = '$name', content = '$content' where id = '$id'";
 		$result = $this->db->query($sql);
+		}
 	}
 	
 	public function delete_gallery($id){

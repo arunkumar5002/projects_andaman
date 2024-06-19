@@ -71,7 +71,7 @@
 </div>
 
 <script type="text/javascript">
-    /* setTimeout(function () {
+     setTimeout(function () {
         $('.message').fadeOut('fast');
-     }, 2000); */
+     }, 1500);
 </script>

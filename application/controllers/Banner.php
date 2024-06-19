@@ -71,6 +71,28 @@ class Banner extends CI_Controller{
 		$id = $this->input->post('id');
         $name = $this->input->post('name');
         $content = $this->input->post('content');
+		
+		$source = '';
+	    if(isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])){
+				            $config['upload_path']     = 'site/banner';
+				            $config['allowed_types']   = 'jpg|png|jpeg|webp';
+
+				            $config['file_name']       = rand().time();     
+
+
+				            $this->load->library('upload', $config);
+							
+							
+				         if ( ! $this->upload->do_upload('image')){
+                            $this->session->set_flashdata('error',"please upload 1568 * 789");
+                            redirect('banner'); 
+                            return;
+                            } else{
+				  
+				             $data = array('upload_data' =>$this->upload->data());
+				           $source = $data['upload_data']['file_name'];
+				        }
+	   }
 
 
         $this->banner_model->update_banner($name,$content,$source,$status, $id);

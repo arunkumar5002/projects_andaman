@@ -33,8 +33,12 @@ class Blog_model extends CI_Model
 	}
 	
 	public function update_blog($name,$content,$source,$status, $id){
+		if(!empty($source)){
 		
-		$sql = "update pa_blog SET name = '$name', content = '$content' where id = '$id'";
+		   $sql = "update pa_blog SET name = '$name', content = '$content',image = '$source' where id = '$id'";
+		}else{
+			$sql = "update pa_blog SET name = '$name', content = '$content' where id = '$id'";
+		}
 		$result = $this->db->query($sql);
 	}
 	

@@ -94,7 +94,7 @@
               <div class="dest-points text-center mt-3">
 
                 <div class="way_view">
-                  <a href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($pack->package_title); ?>"><?php echo $pack->package_count; ?> TOURS <h5 class="way_view"><?php echo $pack->package_title; ?></h5>
+                  <a href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($pack->package_title); ?>"><?php echo $pack->package_count; ?> TOURS <h5 class="way_view"><?php echo $pack->category_name; ?></h5>
                   </a>
 
 

@@ -48,8 +48,9 @@
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-xl-6 mt-5">
+		<?php foreach ($package as $pac): ?>
             <div class="explores">
-                <h2>Andaman Delight</h2>
+                <h2><?php echo $pac->package_heading; ?></h2>
 
 
                 <div class="day_night mt-3">
@@ -67,10 +68,10 @@
 
                 <div class="mt-2">
                     <p>
-                        25 N Port Blair, 1 N Havelock (South Sea )
+                        <?php echo $pac->place; ?>
                     </p>
                 </div>
-				<?php foreach ($package as $pac): ?>
+				
                 <div class="head_title mt-3">
 
                     <h5>Package inclusions</h5>
@@ -105,8 +106,8 @@
 
 
                 </div>
-				<?php endforeach; ?>
             </div>
+			<?php endforeach; ?>
         </div>
 
 
@@ -213,7 +214,9 @@
      
         <div class="col-xl-6">
             <section class="wrapper">
-                <img id="mainPhoto" src="<?php echo base_url() ?>assets/images/gallery/gallery_01.webp" />
+			<?php foreach ($package as $pac):?>
+                <img id="mainPhoto" src="<?php echo base_url('site/package/'. $pac->image); ?>" />
+				<?php endforeach; ?>
                 <div class="image-wrapper">
 				<?php $image_bundle = explode(',', $pac->image_bundle);
                     foreach ($image_bundle as $image): ?>

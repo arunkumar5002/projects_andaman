@@ -33,9 +33,13 @@ class Banner_model extends CI_Model
 	}
 	
 	public function update_banner($name,$content,$source,$status, $id){
-		
-		$sql = "update pa_banner SET name = '$name', content = '$content' where id = '$id'";
-		$result = $this->db->query($sql);
+		if(!empty($source)){
+			$sql = "update pa_banner SET name = '$name', content = '$content',image = '$source' where id = '$id'";
+		    $result = $this->db->query($sql);		
+		}else{
+			$sql = "update pa_banner SET name = '$name', content = '$content' where id = '$id'";
+		    $result = $this->db->query($sql);
+		}
 	}
 	
 	public function delete_banner($id){

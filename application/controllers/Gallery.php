@@ -22,8 +22,8 @@ class Gallery extends CI_Controller{
     $name = $this->input->post('name');
     $content = $this->input->post('content');
     $status = 1;
+	
     $source = '';
-
     if(isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])){
         $config['upload_path']   = 'site/gallery';
         $config['allowed_types'] = 'jpg|png|jpeg|webp';
@@ -69,6 +69,29 @@ class Gallery extends CI_Controller{
 		$id = $this->input->post('id');
         $name = $this->input->post('name');
         $content = $this->input->post('content');
+		
+		$source = '';
+    if(isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])){
+        $config['upload_path']   = 'site/gallery';
+        $config['allowed_types'] = 'jpg|png|jpeg|webp';
+        $config['max_size']      = 2048; // 2MB
+		$config['width']          = 5000;
+        $config['height']         = 5000;
+        $config['file_name']     = rand().time();
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('image')){
+         
+            $this->session->set_flashdata('error','Please upload image 365*365');
+            redirect('gallery');
+            return;
+        } else {
+            $data = $this->upload->data();
+            $source = $data['file_name'];
+
+        }
+    }
 
 
         $this->gallery_model->update_gallery($name,$content,$source,$status, $id);
