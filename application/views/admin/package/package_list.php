@@ -37,7 +37,7 @@
 						?>
                             <tr>
                                 <td><span class="fw-medium"><?php echo $i++; ?></span></td>
-                                <td><?php echo $row->package_title; ?></td>
+                                <td><?php echo $row->package_heading; ?></td>
                                 <td class="package-content"><?php echo $row->package_content; ?></td>
 								<td><?php echo $row->package_cost; ?></td>
                                 <td style="width:25%;">

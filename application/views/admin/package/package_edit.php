@@ -55,7 +55,7 @@
             <textarea id="bootstrap-maxlength-example2" name="package_content" class="form-control bootstrap-maxlength-example" rows="5"><?php echo isset($package) ? $package->package_content : '' ?></textarea>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
-		  <div class="col-md-6 fv-plugins-icon-container">
+		  <div class="col-md-3 fv-plugins-icon-container">
             <label for="formValidationFile" name="image" class="form-label">Package Cost</label>
             <input class="form-control" type="number" id="formValidationFile" name="package_cost" value="<?php echo isset($package) ? $package->package_cost : '' ?>">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
