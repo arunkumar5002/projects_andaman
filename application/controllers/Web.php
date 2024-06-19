@@ -30,7 +30,7 @@ class Web extends CI_Controller{
 
 	
 	public function about_us(){
-        $data['package'] = $this->package_model->get_packages();
+        $data['pack'] = $this->package_model->get_packages();
 		$data['type'] = $this->package_model->create_list();
         $data['content'] = "web/about_us";
         $this->load->view('web/template', $data);

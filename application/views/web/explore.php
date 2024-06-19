@@ -54,8 +54,8 @@
 
                 <div class="costing">
                     <h5 class="mb-0"> Package cost: </h5>
-                    <p class="mb-0">₹20,000 /-</p>
-                    <del>₹30,000 /-</del>
+                    <p class="mb-0">₹<?php echo $pac->package_cost; ?> /-</p>
+                    <del>₹<?php echo $pac->package_price; ?> /-</del>
 
                     <div class="discount">
                         <p class="mb-0">Save: 33%</p>
@@ -67,12 +67,8 @@
 
 
                     <div class="day_night">
-                        <i class="fa-solid fa-mountain-sun" style="color: #4f4f4f;"></i>
-                        <p class="days">7 Days</p>
-                    </div>
-                    <div class="day_night">
-                        <i class="fa-solid fa-cloud-moon" style="color: #4f4f4f;;"></i>
-                        <p class="days">6 Nights</p>
+                        <i class="fa-solid fa-mountain-sun" style="color: #4f4f4f;"></i><i class="fa-solid fa-cloud-moon" style="color: #4f4f4f;;"></i>
+                        <p class="days"><?php echo $pac->day_plans; ?></p>
                     </div>
                 </div>
 
@@ -208,9 +204,9 @@
                         <div class="day_1">
                             <p>Day-<?php echo $i++; ?></p>
                         </div>
-
+                        <div>
                         <h2 class="accordion__question">(<?php echo $list->plan_title; ?> )</h2>
-
+                           </div>
                         <span class="accordion__icon">
                             <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
                         </span>
