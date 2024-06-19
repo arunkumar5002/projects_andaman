@@ -139,12 +139,18 @@
     </div>
 
     <!-- whatsup -->
-    <div class="chat_box">
+    <div class="chat_box" style="display: flex;">
       <div class="whatsup">
 
         <a href="https://wa.me/919933292368" target="_blank"> <img src="<?php echo base_url(); ?>assets/images/whatsup.svg" alt="chatbox"></a>
 
       </div>
+      <div class="mb-5" style="display: flex; ">
+        <button type="button" class="btn enquire_fix  show-modal" data-toggle="modal" data-target="#myModal">
+          Enquire Form
+        </button>
+      </div>
+
 
     </div>
     <!-- whatsup_end -->
@@ -152,15 +158,15 @@
 
 
     </body>
-    
+
     <script src="assets/js/script.js"></script>
-    <script  type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/popper.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-    <script  type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/slider/js/owl.carousel.min.js"></script>
 
-    
+
 
 
     <!-- gallery -->
@@ -388,13 +394,13 @@
     </script>
 
 
-<!-- scroll_to_fix -->
+    <!-- scroll_to_fix -->
 
-<script>
-	window.addEventListener("scroll", function () {
-		let header = document.querySelector("header");
-		header.classList.toggle("sticky", window.scrollY > 0);
-	});
-</script>
+    <script>
+      window.addEventListener("scroll", function() {
+        let header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
 
     </html>

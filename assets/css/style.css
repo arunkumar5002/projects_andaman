@@ -73,7 +73,6 @@ body {
 
 p {
 	margin-bottom: 0px;
-	width: 100%;
 }
 
 .no-padding {
@@ -561,11 +560,6 @@ header .small-menu {
 	color: white;
 }
 
-
-
-
-
-
 .dest-points h5 {
 	color: white;
 	font-size: 18px;
@@ -1046,8 +1040,6 @@ footer .tags ul li {
 	text-align: center;
 }
 
-
-
 .gallery {
 	padding: 50px;
 	padding: 30px;
@@ -1203,6 +1195,79 @@ footer .tags ul li {
 
 	align-items: center;
 	gap: 10px;
+}
+
+.costing {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.costing h5 {
+	font-weight: 700;
+	font-size: 22px;
+	color: green;
+}
+
+.costing p {
+	font-weight: 700;
+	font-size: 25px;
+	color: rgb(255, 38, 0) !important;
+}
+
+.costing del {
+	font-weight: 600;
+
+	color: rgb(20, 42, 71);
+}
+
+.discount {
+	background-color: #045c80;
+	border-radius: 5px;
+	padding: 5px 7px 5px 7px;
+}
+
+.discount p {
+	color: white !important;
+	font-size: 14px !important;
+}
+
+@media screen and (max-width: 520px) {
+	.costing {
+		display: flex;
+		gap: 10px;
+		align-items: center !important;
+	}
+
+	.costing h5 {
+		font-weight: 600;
+		font-size: 16px;
+		color: green;
+	}
+
+	.costing p {
+		font-weight: 600;
+		font-size: 15px;
+		color: rgb(255, 38, 0) !important;
+	}
+
+	.costing del {
+		font-weight: 600;
+
+
+		color: rgb(20, 42, 71);
+	}
+
+	.discount {
+		background-color: #045c80;
+		border-radius: 5px;
+		padding: 3px 5px 3px 5px;
+	}
+
+	.discount p {
+		color: white !important;
+		font-size: 10px !important;
+	}
 }
 
 .explores h2 {
@@ -1370,6 +1435,32 @@ footer .tags ul li {
 	padding: 10px 20px !important;
 	border-radius: 3px !important;
 	box-shadow: none !important;
+}
+
+.enquire_fix {
+	background-color: #268641 !important;
+	color: white !important;
+	padding: 10px 20px !important;
+	border-radius: 3px !important;
+	box-shadow: none !important;
+	position: fixed;
+	right: 25px;
+}
+
+@media screen and (max-width: 520px) {
+	.enquire_fix {
+		background-color: #268641 !important;
+		color: white !important;
+		padding: 5px 10px !important;
+		border-radius: 2px !important;
+		box-shadow: none !important;
+		position: fixed;
+		right: 25px;
+		font-size: 12px !important;
+	}
+	.whatsup img {
+		height: 35px !important;
+	}
 }
 
 .enquire:hover {
@@ -1710,12 +1801,7 @@ footer .tags ul li {
 	}
 	.chat_box {
 		bottom: 90px !important;
-		right: 5px !important;
 		padding: 8px !important;
-	}
-
-	.whatsup img {
-		height: 40px !important;
 	}
 }
 
@@ -1784,11 +1870,10 @@ footer .tags ul li {
 .chat_box {
 	position: fixed;
 	bottom: 52px;
-	right: 25px;
 	padding: 15px;
 }
 .whatsup img {
-	height: 50px !important;
+	height: 50px;
 }
 
 /* chatbox_end */
@@ -1986,3 +2071,6 @@ header.sticky {
 	}
 }
 /* scrool_to_fix_end*/
+
+.frames {
+}

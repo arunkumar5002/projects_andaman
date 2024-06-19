@@ -52,8 +52,19 @@
             <div class="explores">
                 <h2><?php echo $pac->package_heading; ?></h2>
 
+                <div class="costing">
+                    <h5 class="mb-0"> Package cost: </h5>
+                    <p class="mb-0">₹20,000 /-</p>
+                    <del>₹30,000 /-</del>
+
+                    <div class="discount">
+                        <p class="mb-0">Save: 33%</p>
+                       
+                    </div>
+                </div>
 
                 <div class="day_night mt-3">
+
 
                     <div class="day_night">
                         <i class="fa-solid fa-mountain-sun" style="color: #4f4f4f;"></i>
@@ -73,39 +84,46 @@
                 </div>
 				
                 <div class="head_title mt-3">
+                <?php foreach ($package as $pac) : ?>
+                    <div class="head_title mt-3">
 
-                    <h5>Package inclusions</h5>
-                    <ul class="mt-3 mb-3"><li><?php echo $pac->package_inclusion; ?></li></ul>
-
-                     
-                    <h5>Package exclusions</h5>
-                      <ul class="mt-3 mb-3"><li>
-
-                    <?php echo $pac->package_exclusions; ?>
-
-                    <h5>Hotels and Package cost</h5>
-                     </li></ul>
+                        <h5>Package inclusions</h5>
+                        <ul class="mt-3 mb-3">
+                            <li><?php echo $pac->package_inclusion; ?></li>
+                        </ul>
 
 
+                        <h5>Package exclusions</h5>
+                        <ul class="mt-3 mb-3">
+                            <li>
 
-                    <ul class="mt-1 mb-3">
-                        <li> <?php echo $pac->package_content; ?></li>
+                                <?php echo $pac->package_exclusions; ?>
 
-                    </ul>
+                               
+                            </li>
+                        </ul>
 
-                    <h5> Package cost- ₹<?php echo $pac->package_cost; ?>/_</h5>
 
-                    <b>Total Tourist</b>
+                        <h5>Hotels </h5>
+                        <ul class="mt-1 mb-3">
+                            <li> <?php echo $pac->package_content; ?></li>
 
-                    <ul class="mt-1 mb-3">
-                        <li>0<?php echo $pac->adult; ?> Adult.</li>
-                        <li>0<?php echo $pac->child; ?> Child(above 5 years).</li>
+                        </ul>
 
-                    </ul>
 
+
+                        <b>Total Tourist</b>
+
+                        <ul class="mt-1 mb-3">
+                            <li>0<?php echo $pac->adult; ?> Adult.</li>
+                            <li>0<?php echo $pac->child; ?> Child(above 5 years).</li>
+
+                        </ul>
 
 
                 </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
 			<?php endforeach; ?>
         </div>
@@ -147,7 +165,7 @@
                 </div>
                 <div class="includes">
                     <img src="<?php echo base_url() ?>assets/images/includes/cab.png" alt="cab">
-                    <h5>Cab Fesility</h5>
+                    <h5>cab facility</h5>
 
                 </div>
             </div>
@@ -155,12 +173,12 @@
 
                 <div class="includes">
                     <img src="<?php echo base_url() ?>assets/images/includes/pair.png" alt="paires">
-                    <h5>SightSeeing</h5>
+                    <h5>sight seeing</h5>
 
                 </div>
                 <div class="includes">
                     <img src="<?php echo base_url() ?>assets/images/includes/person.png" alt="persons">
-                    <h5>Coordinator</h5>
+                    <h5>coordinator</h5>
 
                 </div>
             </div>
@@ -183,62 +201,49 @@
 
 
             <!-- Accordion 1  -->
-			<?php $i = 1;
-			foreach ($plans as $list): ?>
-            <div class="accordion">
-                <div class="accordion__header">
-                    <div class="day_1">
-                        <p>Day-<?php echo $i++; ?></p>
-                    </div>
-
-                    <h2 class="accordion__question">(<?php echo $list->plan_title; ?> )</h2>
-
-                    <span class="accordion__icon">
-                        <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
-                    </span>
-                </div>
-                <div class="accordion__content">
-					<ul>
-                        <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
-                            <li><?php echo $list->plan_description; ?></li>
+            <?php $i = 1;
+            foreach ($plans as $list) : ?>
+                <div class="accordion">
+                    <div class="accordion__header">
+                        <div class="day_1">
+                            <p>Day-<?php echo $i++; ?></p>
                         </div>
-					</ul>	
-                    
+
+                        <h2 class="accordion__question">(<?php echo $list->plan_title; ?> )</h2>
+
+                        <span class="accordion__icon">
+                            <i style="color: black;" id="accordion-icon" class="ri-add-line"></i>
+                        </span>
+                    </div>
+                    <div class="accordion__content">
+                        <ul>
+                            <div class="mb-3 mt-3" style="display: flex; gap: 12px; ">
+                                <li><?php echo $list->plan_description; ?></li>
+                            </div>
+                        </ul>
+
+                    </div>
                 </div>
-            </div>
-			<?php endforeach; ?>
+            <?php endforeach; ?>
 
         </div>
 
 
-     
+
         <div class="col-xl-6">
             <section class="wrapper">
 			<?php foreach ($package as $pac):?>
                 <img id="mainPhoto" src="<?php echo base_url('site/package/'. $pac->image); ?>" />
 				<?php endforeach; ?>
                 <div class="image-wrapper">
-				<?php $image_bundle = explode(',', $pac->image_bundle);
-                    foreach ($image_bundle as $image): ?>
-                    <img class="imgCarousel" src="<?php echo base_url('site/package/' . trim($image)); ?>" />
+                    <?php $image_bundle = explode(',', $pac->image_bundle);
+                    foreach ($image_bundle as $image) : ?>
+                        <img class="imgCarousel" src="<?php echo base_url('site/package/' . trim($image)); ?>" />
                     <?php endforeach; ?>
                 </div>
-				
+
             </section>
         </div>
-		
+
     </div>
-</div>
-
-
-
-
-
-
-
-
-<div class="mb-5" style="display: flex; justify-content: center;">
-    <button type="button" class="btn enquire show-modal" data-toggle="modal" data-target="#myModal">
-        Enquire Form
-    </button>
 </div>
