@@ -116,12 +116,17 @@
               <ul class="menu-sub"> 
                 <li class="menu-item">
                   <a href="<?php echo base_url()?>package/package_create" class="menu-link" >
-                    <div>Select Category</div>
+                    <div>create Category</div>
                   </a>
-                </li>              
+                </li> 
+                <li class="menu-item">
+                  <a href="<?php echo base_url()?>package/package_type" class="menu-link" >
+                    <div>Category Type</div>
+                  </a>
+                </li> 				
                 <li class="menu-item">
                   <a href="<?php echo base_url()?>package" class="menu-link" >
-                    <div>Create Package</div>
+                    <div>Select Package</div>
                   </a>
                 </li>
 				

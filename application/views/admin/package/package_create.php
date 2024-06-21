@@ -31,6 +31,18 @@
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-6 fv-plugins-icon-container">
+            <label class="form-label" for="formValidationName">Select Type</label>
+            <select class="form-select" name="package_type" id="exampleFormControlSelect1" aria-label="Default select example">
+            <option selected="">Select Type</option>
+			<?php $i = 1;
+                   foreach ($type as $row):
+			?>
+            <option name="package_type" value="<?php echo $row->id?>"><?php echo $row->category_type?></option>
+            <?php endforeach; ?>
+          </select>
+          <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+		  
+		  <div class="col-md-6 fv-plugins-icon-container">
             <label for="formValidationFile" name="image" class="form-label">Image</label>
             <input class="form-control" type="file" id="formValidationFile" name="image">
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>

@@ -1,50 +1,92 @@
 <div class="content-wrapper">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="py-3 mb-4">
+      <span class="text-muted fw-light">Home /</span> Package Type
+    </h4>
 
-        <!-- Content -->
-        
-          <div class="container-xxl flex-grow-1 container-p-y">
-            
-            
-<h4 class="py-3 mb-4">
-  <span class="text-muted fw-light">Home /</span> Package Create
-</h4>
+    <div class="row">
+      <!-- FormValidation -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <form action="<?php echo base_url('package/save_type_package'); ?>" method="POST" enctype="multipart/form-data" id="formValidationExamples" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
+              <input type="hidden" id="category_id" name="category_id">
+              <div class="col-12">
+                <label class="form-label" for="Category_name">Category Name</label>
+                <input class="form-control" type="text" id="Category_name" name="Category_name">
+              </div>
 
-<div class="row">
-  <!-- FormValidation -->
-  <div class="col-12">
-    <div class="card">
-      <div class="card-body">
+              <div class="col-12">
+                <button type="submit" name="submitButton" class="btn btn-info">Submit</button>
+              </div>
+            </form>
 
-        <form action="<?php echo base_url();?>package/save_create_package" method="POST" enctype="multipart/form-data" id="formValidationExamples" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">	  
-		  
-		  <div class="col-12">
-            <label class="form-label" for="bootstrap-maxlength-example2">Create category</label>
-			<input class="form-control" type="text" id="formValidationFile" name="Category_name">
+            <div class="table-responsive text-nowrap mt-5">
+              <table class="table table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th class="text-white">S.No</th>
+                    <th class="text-white">Category Title</th>
+                    <th class="text-white">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                  <?php $i = 1;
+                  foreach ($category as $row): ?>
+                    <tr>
+                      <td><span class="fw-medium"><?php echo $i++; ?></span></td>
+                      <td>
+                        <span class="category-name"><?php echo $row->category_name; ?></span>
+                        <input type="hidden" class="category-id" value="<?php echo $row->id; ?>">
+                      </td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item text-info edit-category" href="#" data-id="<?php echo $row->id; ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                            <a class="dropdown-item text-danger delete-category" href="<?php echo base_url('package/category_delete/' . $row->id); ?>"><i class="bx bx-trash me-1"></i> Delete</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
           </div>
-
-          <div class="col-12">
-            <button type="submit" name="submitButton" class="btn btn-info">Submit</button>
-          </div>
-		  </form>
+        </div>
       </div>
+      <!-- /FormValidation -->
     </div>
   </div>
-  <!-- /FormValidation -->
+  <!-- / Content -->
 </div>
 
-
-          </div>
-          <!-- / Content -->
-
-        </div>
-
-
-<script src="https://cdn.tiny.cloud/1/xlfeurntq9y7i4xekogr2t4bmyapgkvf5omt3qefzg3qda4b/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>		
 <script>
-  
- tinymce.init({
-    selector: 'textarea#file-picker',
-    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+$(document).ready(function() {
+  // Edit category click handler
+  $('.edit-category').on('click', function(e) {
+    e.preventDefault();
+    var categoryId = $(this).data('id');
+    editCategory(categoryId);
   });
-</script>		
+
+  // Function to fetch category details via AJAX
+  function editCategory(id) {
+    $.ajax({
+      url: '<?php echo base_url('package/get_category_details'); ?>',
+      type: 'POST',
+      dataType: 'json',
+      data: { id: id },
+      success: function(response) {
+        $('#category_id').val(response.id);
+        $('#Category_name').val(response.category_name);
+      },
+      error: function(xhr, status, error) {
+        console.error('AJAX Error: ' + status + ' - ' + error);
+      }
+    });
+  }
+});
+</script>

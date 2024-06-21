@@ -6,18 +6,62 @@ class Package_model extends CI_Model
 	
 	public function create_package($Category_name,$status){
 		$package_data = array(
-			'Category_name' => $Category_name,
+			'category_name' => $Category_name,
 			'status' => $status
 		);
 
 		$this->db->insert('pa_create_package', $package_data);
 	}
+	
+	 public function update_category($id, $Category_name) {
+    $sql = "update pa_create_package SET category_name = '$Category_name' where id = '$id'";
+		$result = $this->db->query($sql);
+  }
+  
+  public function get_category_by_id($id) {
+    $query = $this->db->get_where('pa_create_package', array('id' => $id));
+    return $query->row();
+  }
 
-	public function save_package($package_title,$package_content,$package_cost,$package_price,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions,$source,$image_bundle,$status)
+
+	public function delete_category($id){
+		$this->db->query("UPDATE  pa_create_package SET status = 0 Where id='$id'");
+	}
+	
+ public function type_package($package_title,$Category_type, $status) {
+        $package_data = array(
+		    'package_title' => $package_title,
+            'category_type' => $Category_type,
+            'status' => $status
+        );
+
+        $this->db->insert('pa_type_package', $package_data);
+    }
+
+    public function update_type($id, $Category_type) {
+        $data = array(
+            'category_type' => $Category_type
+        );
+        $this->db->where('id', $id);
+        $this->db->update('pa_type_package', $data);
+    }
+
+    public function get_type_by_id($id) {
+        $query = $this->db->get_where('pa_type_package', array('id' => $id));
+        return $query->row_array();
+    }
+
+
+	public function delete_type($id){
+		$this->db->query("UPDATE  pa_type_package SET status = 0 Where id='$id'");
+	}
+
+	public function save_package($package_title,$package_type,$package_content,$package_cost,$package_price,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions,$source,$image_bundle,$status)
 	{
 
 		$package_data = array(
 			'package_title' => $package_title,
+			'package_type' => $package_type,
 			'package_content' => $package_content,
 			'package_cost' => $package_cost,
 			'package_price' => $package_price,
@@ -46,6 +90,11 @@ class Package_model extends CI_Model
 	
 	public function create_list(){
 		$query = $this->db->query("SELECT * FROM pa_create_package WHERE status = 1");
+		return $query->result();
+	}
+	
+	public function type_list(){
+		$query = $this->db->query("SELECT * FROM pa_type_package WHERE status = 1");
 		return $query->result();
 	}
 	
