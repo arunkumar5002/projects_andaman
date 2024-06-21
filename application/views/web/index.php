@@ -88,7 +88,7 @@
           <div class="dest-col">
             <div class="dest-img zoom-effect-1">
 
-              <img src="<?php echo base_url('site/package/' . $pack->image); ?>" style="height: 200px; object-fit: cover;" alt="package_image" />
+              <img src="<?php echo base_url('site/package/' . $pack->image); ?>" style="height: 200px; object-fit: cover; width: 100%;" alt="package_image" />
 
 
               <div class="dest-points text-center mt-3">
