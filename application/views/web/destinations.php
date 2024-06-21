@@ -1,5 +1,3 @@
-
-
 <!--  ************************* Page Title Starts Here ************************** -->
 <div class="page-nav no-margin row">
     <div class="container">
@@ -36,45 +34,65 @@
 
 <div class="container mb-5">
     <div class="row">
-	<?php foreach ($packages as $pac):?>
-        <div class="col-xl-4 mt-3">
+        <?php foreach ($packages as $pac) : ?>
+            <div class="col-xl-4 mt-3">
 
-            <div class="packages">
-                <img src="<?php echo base_url('site/package/'. $pac->image); ?>" alt="package">
+                <div class="packages">
+                    <img src="<?php echo base_url('site/package/' . $pac->image); ?>" alt="package">
+                </div>
+
+                <div class="top_badge">
+                    <p class="save mb-0">Save <br>33%</p>
+
+                </div>
+
+                <div class="mb-3 mt-3" style="margin-left: 10px;">
+
+                    <p class="topics"><?php echo $pac->package_heading; ?></p>
+
+
+                    <p style="font-size: 14px; font-weight: 700;"><?php echo $pac->day_plans; ?></p>
+
+
+                </div>
+
+                <!-- request_call_back button -->
+
+                <div class="costing">
+                    <h5 style="font-size: 18px;" class="mb-0"> Package cost: </h5>
+                    <p style="font-size: 20px;" class="mb-0">₹<?php echo $pac->package_cost; ?> /-</p>
+                    <del>₹<?php echo $pac->package_price; ?> /-</del>
+                </div>
+
+                <div style=" display:flex; align-items: center; gap: 10px;">
+                    <div class="callback">
+
+
+                        <div class=" view_more mt-3 mb-3">
+                            <button class="btn-5" data-toggle="modal" data-target="#myModal"> <i class="fa-solid fa-eye call_phone" style="color: #feaa34; font-size: 15px;"></i>&nbsp Request</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="callback">
+
+
+                        <div class=" view_more mt-3 mb-3">
+                            <button onclick="window.location.href='<?php echo base_url('web/explore/' . $pac->id) ?>'" class="btn-5"> <i class="fa-solid fa-phone call_phone" style="color: #feaa34; font-size: 15px;"></i> &nbsp View </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- request_call_back button -->
+
+
+
+
             </div>
-
-            <div class="mb-3 mt-3" style="margin-left: 10px;">
-
-                <p class="topics"><?php echo $pac->package_heading; ?></p>
-
-
-                <p style="font-size: 13px;"><?php echo $pac->day_plans; ?></p>
-
-
-            </div>
-			
-			<!-- request_call_back button -->
-
-<div class="callback">
-  <div class="call_phone">
-    <i class="fa-solid fa-phone" style="color: #feaa34;"></i>
-  </div>
-
-  <div class=" view_more mt-3 mb-3">
-    <button onclick="window.location.href='<?php echo base_url('web/explore/' . $pac->id) ?>'" class="btn-5">Request Callback</button>
-  </div>
-
-</div>
-
-
-<!-- request_call_back button -->
-
-
-
-
-        </div>
-		<?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
 
 </div>
-
