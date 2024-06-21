@@ -72,7 +72,7 @@ class Web_model extends CI_Model
     }
 	
 	public function get_plans_by_package_id($package_id) {
-    $query = $this->db->query("SELECT * FROM pa_package_plans WHERE package_id = $package_id");
+    $query = $this->db->query("SELECT * FROM pa_package_plans WHERE package_id = $package_id AND status = 1");
     return $query->result();
    }
 

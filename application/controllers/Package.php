@@ -7,6 +7,7 @@ class Package extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('package_model');
+		$this->load->helper('url');
 
     }
 	
@@ -132,29 +133,116 @@ class Package extends CI_Controller{
         $this->load->view('admin/template', $data);
 	}
 	
-	public function package_update(){
-		$id = $this->input->post('id');
-		$package_content = $this->input->post('package_content');
-		$package_cost = $this->input->post('package_cost');
-		$adult = $this->input->post('adult');
-		$child = $this->input->post('child');
-		$day_plans = $this->input->post('day_plans');
-		$package_heading = $this->input->post('package_heading');
-		$place = $this->input->post('place');
-		$package_inclusion = $this->input->post('package_inclusion');
-		$package_exclusions = $this->input->post('package_exclusions');
+	public function package_update() {
+    $this->load->library('upload');
 
+    $id = $this->input->post('id');
+    $package_content = $this->input->post('package_content');
+    $package_cost = $this->input->post('package_cost');
+    $package_price = $this->input->post('package_price');
+    $adult = $this->input->post('adult');
+    $child = $this->input->post('child');
+    $day_plans = $this->input->post('day_plans');
+    $package_heading = $this->input->post('package_heading');
+    $place = $this->input->post('place');
+    $package_inclusion = $this->input->post('package_inclusion');
+    $package_exclusions = $this->input->post('package_exclusions');
 
-        $this->package_model->update_package($package_content,$package_cost,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions, $id);
+    $source = '';
+    if (isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])) {
+        $config['upload_path'] = 'site/package';
+        $config['allowed_types'] = 'jpg|png|jpeg|webp';
+        $config['file_name'] = rand() . time();
 
-        redirect('package/package_list');
-	}
+        $this->upload->initialize($config);
+
+        if (!$this->upload->do_upload('image')) {
+            // Handle upload error
+        } else {
+            $data = array('upload_data' => $this->upload->data());
+            $source = $data['upload_data']['file_name'];
+        }
+    }
+
+    $image_bundle = array();
+    if (isset($_FILES['image_bundle']['name']) && !empty($_FILES['image_bundle']['name'])) {
+        $filesCount = count($_FILES['image_bundle']['name']);
+        for ($i = 0; $i < $filesCount; $i++) {
+            $_FILES['file']['name'] = $_FILES['image_bundle']['name'][$i];
+            $_FILES['file']['type'] = $_FILES['image_bundle']['type'][$i];
+            $_FILES['file']['tmp_name'] = $_FILES['image_bundle']['tmp_name'][$i];
+            $_FILES['file']['error'] = $_FILES['image_bundle']['error'][$i];
+            $_FILES['file']['size'] = $_FILES['image_bundle']['size'][$i];
+
+            $config['upload_path'] = 'site/package';
+            $config['allowed_types'] = 'jpg|png|jpeg|webp';
+            $config['file_name'] = rand() . time();
+
+            $this->upload->initialize($config);
+
+            if ($this->upload->do_upload('file')) {
+                $data = $this->upload->data();
+                $image_bundle[] = $data['file_name'];
+            }
+        }
+    }
+
+    $image_bundle = implode(',', $image_bundle);
+
+    $this->package_model->update_package($package_content,$package_cost,$package_price,$adult,$child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions,$source,$image_bundle,$id
+    );
+
+    redirect('package/package_list');
+}
 
    public function package_delete($id){
 		
 		$result = $this->package_model->delete_package($id);
         redirect('package/package_list');
 	}
+	
+	public function edit_plan($id) {
+        $data['package'] = $this->package_model->plan_edit($id);
+        $data['content'] = 'admin/package/package_edit_details';
+		$this->load->view('admin/template',$data);
+    }
+	
+ public function package_plan_update() {
+    $this->load->helper(array('form', 'url'));
+    
+    if ($this->input->post('submitButton')) {
+        $package_ids = $this->input->post('id');
+        $package_id = $this->input->post('package_id');
+        $plan_titles = $this->input->post('plan_title');
+        $plan_descriptions = $this->input->post('plan_description');
+        
+        foreach ($plan_titles as $index => $title) {
+            $id = isset($package_ids[$index]) ? $package_ids[$index] : '';
+            $description = isset($plan_descriptions[$index]) ? $plan_descriptions[$index] : '';
+
+            if (empty($id)) {
+                // Insert new plan
+                $status = 1;
+                $this->package_model->save_active_package($package_id, $title, $description, $status);
+            } else {
+                // Update existing plan
+                $this->package_model->update_plan($id, $title, $description);
+            }
+        }
+    }
+
+    redirect('package/package_list');
+}
+public function delete_plan() {
+    $data = json_decode(file_get_contents('php://input'), true);
+    $plan_id = $data['id'];
+    
+    if ($this->package_model->delete_plan($plan_id)) {
+        echo json_encode(['success' => true]);
+    } else {
+        echo json_encode(['success' => false]);
+    }
+}
 
 	
 }	
