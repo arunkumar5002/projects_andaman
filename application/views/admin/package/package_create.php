@@ -31,9 +31,9 @@
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  
 		  <div class="col-md-6 fv-plugins-icon-container">
-            <label class="form-label" for="formValidationName">Select Type</label>
+            <label class="form-label" for="formValidationName">Package Type</label>
             <select class="form-select" name="package_type" id="exampleFormControlSelect1" aria-label="Default select example">
-            <option selected="">Select Type</option>
+            <option selected="">Package Type</option>
 			<?php $i = 1;
                    foreach ($type as $row):
 			?>

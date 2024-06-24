@@ -1,8 +1,14 @@
+<style>
+.pa{
+	width:100%;
+	height:100px;
+}
+</style>
 <div class="content-wrapper">
   <!-- Content -->
   <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="py-3 mb-4">
-      <span class="text-muted fw-light">Home /</span> Package Type
+      <span class="text-muted fw-light">Home /</span> Package Create
     </h4>
 
     <div class="row">
@@ -10,11 +16,16 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <form action="<?php echo base_url('package/save_type_package'); ?>" method="POST" enctype="multipart/form-data" id="formValidationExamples" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
+            <form action="<?php echo base_url('package/save_create_package'); ?>" method="POST" enctype="multipart/form-data" id="formValidationExamples" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate">
               <input type="hidden" id="category_id" name="category_id">
               <div class="col-12">
                 <label class="form-label" for="Category_name">Category Name</label>
                 <input class="form-control" type="text" id="Category_name" name="Category_name">
+              </div>
+			  
+			  <div class="col-12">
+                <label class="form-label" for="image">Image</label>
+                <input class="form-control" type="file" id="image" name="image">
               </div>
 
               <div class="col-12">
@@ -28,7 +39,8 @@
                   <tr>
                     <th class="text-white">S.No</th>
                     <th class="text-white">Category Title</th>
-                    <th class="text-white">Actions</th>
+                    <th class="text-white">Image</th>
+					<th class="text-white">Actions</th>
                   </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
@@ -40,6 +52,11 @@
                         <span class="category-name"><?php echo $row->category_name; ?></span>
                         <input type="hidden" class="category-id" value="<?php echo $row->id; ?>">
                       </td>
+					  <td style="width:25%;">
+                                    <?php if ($row->image != ''): ?>
+                                        <img src="<?php echo base_url('site/package/' . $row->image); ?>" alt="package_andaman" class="pa">
+                                    <?php endif; ?>
+                                </td>
                       <td>
                         <div class="dropdown">
                           <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></button>

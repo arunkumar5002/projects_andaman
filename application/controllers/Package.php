@@ -28,11 +28,27 @@ class Package extends CI_Controller {
   $id = $this->input->post('category_id');
   $Category_name = $this->input->post('Category_name');
   $status = 1;
+  
+  $source = '';
+        if(isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])){
+            $config['upload_path']     = 'site/package';
+            $config['allowed_types']   = 'jpg|png|jpeg|webp';
+            $config['file_name']       = rand() . time();     
+
+            $this->upload->initialize($config);
+            
+            if ( ! $this->upload->do_upload('image')){
+                // Handle upload error
+            } else {
+                $data = array('upload_data' => $this->upload->data());
+                $source = $data['upload_data']['file_name'];
+            }
+        }
 
   if (!empty($id)) {
-    $this->package_model->update_category($id, $Category_name);
+    $this->package_model->update_category($id, $Category_name,$source);
   } else {
-    $this->package_model->create_package($Category_name, $status);
+    $this->package_model->create_package($Category_name,$source,$status);
   }
   redirect('package/package_create');
  }
@@ -50,22 +66,37 @@ class Package extends CI_Controller {
   }
   
   public function package_type() {
-	 $data['package'] = $this->package_model->create_list();
     $data['type'] = $this->package_model->type_list();
     $data['content'] = 'admin/package/package_type';
     $this->load->view('admin/template', $data);
    }
    
-public function save_type_package() {
+  public function save_type_package() {
         $id = $this->input->post('type_id');
         $Category_type = $this->input->post('category_type');
-		$package_title = $this->input->post('package_title');
+		$Category_type = $this->input->post('category_type');
         $status = 1;
+		
+		 $source = '';
+        if(isset($_FILES['image']['name']) && !empty($_FILES['image']['name'])){
+            $config['upload_path']     = 'site/package';
+            $config['allowed_types']   = 'jpg|png|jpeg|webp';
+            $config['file_name']       = rand() . time();     
+
+            $this->upload->initialize($config);
+            
+            if ( ! $this->upload->do_upload('image')){
+                // Handle upload error
+            } else {
+                $data = array('upload_data' => $this->upload->data());
+                $source = $data['upload_data']['file_name'];
+            }
+        }
 
         if (!empty($id)) {
-            $this->package_model->update_type($id, $Category_type);
+            $this->package_model->update_type($id, $Category_type,$source);
         } else {
-            $this->package_model->type_package($package_title,$Category_type, $status);
+            $this->package_model->type_package($Category_type,$source,$status);
         }
         redirect('package/package_type');
     }
@@ -182,7 +213,8 @@ public function save_type_package() {
     }
 
     public function package_edit($id){
-        $data['package'] = $this->package_model->create_list();
+		$data['package_list'] = $this->package_model->create_list();
+		$data['type_list'] = $this->package_model->type_list();
         $data['package'] = $this->package_model->edit_package($id);
         $data['content'] = "admin/package/package_edit";
         $this->load->view('admin/template', $data);
@@ -190,6 +222,8 @@ public function save_type_package() {
 
     public function package_update() {
         $id = $this->input->post('id');
+		$package_title = $this->input->post('package_title');
+		$package_type = $this->input->post('package_type');
         $package_content = $this->input->post('package_content');
         $package_cost = $this->input->post('package_cost');
         $package_price = $this->input->post('package_price');
@@ -242,7 +276,7 @@ public function save_type_package() {
     
         $image_bundle = implode(',', $image_bundle);
     
-        $this->package_model->update_package($package_content, $package_cost, $package_price, $adult, $child, $day_plans, $package_heading, $place, $package_inclusion, $package_exclusions, $source, $image_bundle, $id);
+        $this->package_model->update_package($package_title,$package_type,$package_content, $package_cost, $package_price, $adult, $child, $day_plans, $package_heading, $place, $package_inclusion, $package_exclusions, $source, $image_bundle, $id);
     
         redirect('package/package_list');
     }

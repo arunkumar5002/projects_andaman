@@ -4,18 +4,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Package_model extends CI_Model
 {
 	
-	public function create_package($Category_name,$status){
+	public function create_package($Category_name,$source,$status){
 		$package_data = array(
 			'category_name' => $Category_name,
+			'image' => $source,
 			'status' => $status
 		);
 
 		$this->db->insert('pa_create_package', $package_data);
 	}
 	
-	 public function update_category($id, $Category_name) {
-    $sql = "update pa_create_package SET category_name = '$Category_name' where id = '$id'";
-		$result = $this->db->query($sql);
+	 public function update_category($id, $Category_name,$source) {
+		 if(!empty($source)){
+			 $sql = "update pa_create_package SET category_name = '$Category_name' ,image = '$source' where id = '$id'";
+			 $result = $this->db->query($sql);
+		 }else{
+           $sql = "update pa_create_package SET category_name = '$Category_name' where id = '$id'";
+		   $result = $this->db->query($sql);
+		 }
   }
   
   public function get_category_by_id($id) {
@@ -28,23 +34,27 @@ class Package_model extends CI_Model
 		$this->db->query("UPDATE  pa_create_package SET status = 0 Where id='$id'");
 	}
 	
- public function type_package($package_title,$Category_type, $status) {
+ public function type_package($Category_type,$source,$status) {
         $package_data = array(
-		    'package_title' => $package_title,
             'category_type' => $Category_type,
+			'image' => $source,
             'status' => $status
         );
 
         $this->db->insert('pa_type_package', $package_data);
     }
 
-    public function update_type($id, $Category_type) {
-        $data = array(
-            'category_type' => $Category_type
-        );
-        $this->db->where('id', $id);
-        $this->db->update('pa_type_package', $data);
+   public function update_type($id, $Category_type, $source) {
+    $data = array(
+        'category_type' => $Category_type
+    );
+    if (!empty($source)) {
+        $data['image'] = $source;
     }
+
+    $this->db->where('id', $id);
+    $this->db->update('pa_type_package', $data);
+}
 
     public function get_type_by_id($id) {
         $query = $this->db->get_where('pa_type_package', array('id' => $id));
@@ -122,9 +132,11 @@ class Package_model extends CI_Model
 		return $result->row();
 	}
 	
-public function update_package($package_content,$package_cost,$package_price,$adult,
+public function update_package($package_title,$package_type,$package_content,$package_cost,$package_price,$adult,
     $child,$day_plans,$package_heading,$place,$package_inclusion,$package_exclusions,$source,$image_bundle,$id) {
     $data = array(
+	    'package_title' => $package_title,
+		'package_type' => $package_type,
         'package_content' => $package_content,
         'package_cost' => $package_cost,
         'package_price' => $package_price,

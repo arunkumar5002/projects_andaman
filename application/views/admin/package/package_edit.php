@@ -19,14 +19,26 @@
          <input type="hidden" name="id" value="<?php echo isset($package) ? $package->id : ''; ?>">
 
           <div class="col-md-6 fv-plugins-icon-container">
-            <label class="form-label" for="formValidationName">Package category</label>
+            <label class="form-label" for="formValidationName">Select Package</label>
             <select class="form-select" name="package_title" id="exampleFormControlSelect1" aria-label="Default select example">
-			<option selected="">Select Category</option>
-            <option name="package_title" value="Familypackage">Family package</option>
-            <option name="package_title" value="Adventurepackage">Adventure package</option>
-            <option name="package_title" value="Romancepackage">Romance package</option>
-			<option name="package_title" value="Studentpackage">Student package</option>
- 
+            <option selected="">Select Category</option>
+			<?php foreach ($package_list as $row): ?>
+                                    <option value="<?php echo $row->id; ?>" <?php echo isset($package) && $package->package_title == $row->id ? 'selected' : ''; ?>>
+                                        <?php echo $row->category_name; ?>
+                                    </option>
+                                    <?php endforeach; ?>
+          </select>
+          <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+		  
+		  <div class="col-md-6 fv-plugins-icon-container">
+            <label class="form-label" for="formValidationName">Package Type</label>
+            <select class="form-select" name="package_type" id="exampleFormControlSelect1" aria-label="Default select example">
+            <option selected="">Package Type</option>
+			<?php foreach ($type_list as $row): ?>
+                                    <option value="<?php echo $row->id; ?>" <?php echo isset($package) && $package->package_type == $row->id ? 'selected' : ''; ?>>
+                                        <?php echo $row->category_type; ?>
+                                    </option>
+                                    <?php endforeach; ?>
           </select>
           <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
 		  

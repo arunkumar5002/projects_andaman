@@ -121,7 +121,7 @@
                 </li> 
                 <li class="menu-item">
                   <a href="<?php echo base_url()?>package/package_type" class="menu-link" >
-                    <div>Category Type</div>
+                    <div>Package Type</div>
                   </a>
                 </li> 				
                 <li class="menu-item">
