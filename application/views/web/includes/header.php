@@ -77,7 +77,7 @@
           <ul>
             <li><a href="<?php echo base_url() ?>web">Home</a></li>
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
-            <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
+            <!-- <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
               <ul class="drop_list">
                 <?php foreach ($pack as $menu) : ?>
                   <li><a href="<?php echo base_url() ?>web/package_list/<?php echo ($menu->id); ?>"><?php echo $menu->category_name; ?></a>
@@ -88,6 +88,31 @@
 
 
                 <?php endforeach; ?>
+              </ul>
+            </li> -->
+            <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
+              <ul class="drop_list">
+                  <li class="system-1"><a href="">family package</a>
+                    <ul class="dropdown-1 ">
+                      <li><a href=""> Sub List</a></li>
+                    </ul>
+                  </li>
+                  <li class="system-2"><a href="">family package</a>
+                    <ul class="dropdown-2">
+                      <li><a href=""> second List....</a></li>
+                    </ul>
+                  </li>
+                  <li class="system-3"><a href="">family package</a>
+                    <ul class="dropdown-3 ">
+                      <li><a href=""> Sub List</a></li>
+                    </ul>
+                  </li>
+                  <li class="system-4"><a href="">family package</a>
+                    <ul class="dropdown-4">
+                      <li><a href=""> second List....</a></li>
+                    </ul>
+                  </li>
+
               </ul>
             </li>
             <li><a href="<?php echo base_url() ?>web/blog">Blog</a></li>
