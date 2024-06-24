@@ -45,10 +45,10 @@
             </ul>
           </div>
           <div class="col-md-4 logo">
-            <a href="<?php echo base_url() ?>web"><img src="<?php echo base_url(); ?>assets/images/logo_2.png" alt="logo"/></a>
+            <a href="<?php echo base_url() ?>web"><img src="<?php echo base_url(); ?>assets/images/logo_2.png" alt="logo" /></a>
             <a data-toggle="collapse" data-target="#menu-jk" href="#menu-jk"><i class="fas d-block d-sm-block d-md-none small-menu fa-bars"></i></a>
           </div>
-          <div  class="col-md-4 d-none d-md-block social-link">
+          <div class="col-md-4 d-none d-md-block social-link">
             <ul>
               <li>
                 <i class="fab fa-facebook-square" style="color: black"></i>
@@ -79,11 +79,15 @@
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
             <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
               <ul class="drop_list">
-               <?php foreach ($pack as $menu): ?>
-                <li><a href="<?php echo base_url() ?>web/package_list/<?php echo($menu->id); ?>"><?php echo $menu->category_name; ?></a></li>
-                
+                <?php foreach ($pack as $menu) : ?>
+                  <li><a href="<?php echo base_url() ?>web/package_list/<?php echo ($menu->id); ?>"><?php echo $menu->category_name; ?></a>
+                    <ul class="dropdown-1 ">
+                      <li><a href=""> Sub List</a></li>
+                    </ul>
+                  </li>
 
-             <?php endforeach; ?>
+
+                <?php endforeach; ?>
               </ul>
             </li>
             <li><a href="<?php echo base_url() ?>web/blog">Blog</a></li>
@@ -137,23 +141,23 @@
                         <span class="input-icon"><i class="fa-solid fa-location-dot" style="color: #454545;"></i></span>
                         <input type="text" name="location" class="form-control" placeholder="Travel Detination">
                       </div>
-					  <div class="form-group">
+                      <div class="form-group">
                         <span class="input-icon"><i class="fa fa-user" style="color: #454545;"></i></span>
                         <input type="text" name="people" class="form-control" placeholder="No.of people">
                       </div>
-					  <div class="form-group">
+                      <div class="form-group">
                         <span class="input-icon"><i class="fa-solid fa-calendar-days" style="color: #454545;"></i></span>
                         <input type="date" name="date" class="form-control" placeholder="">
                       </div>
-					  <div class="form-group">
-                        <span class="input-icon"><i class="fa-solid fa-face-smile"style="color: #454545;"></i></span>
+                      <div class="form-group">
+                        <span class="input-icon"><i class="fa-solid fa-face-smile" style="color: #454545;"></i></span>
                         <select class="form-control" name="vacation_type" id="exampleFormControlSelect1" aria-label="Default select example">
-                      <option selected="">Vaction Type</option>
-			           <?php $i = 1;
-                          foreach ($type as $row):
-			            ?>
-                        <option name="vacation_type" value="<?php echo $row->category_name?>"><?php echo $row->category_name?></option>
-                        <?php endforeach; ?>
+                          <option selected="">Vaction Type</option>
+                          <?php $i = 1;
+                          foreach ($type as $row) :
+                          ?>
+                            <option name="vacation_type" value="<?php echo $row->category_name ?>"><?php echo $row->category_name ?></option>
+                          <?php endforeach; ?>
                         </select>
                       </div>
 
