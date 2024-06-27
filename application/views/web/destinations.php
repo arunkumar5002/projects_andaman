@@ -20,22 +20,39 @@
             <h2>Awesome Packages</h2>
             <p>Experience the unparalleled beauty of the Andaman Islands with our Awesome Andaman Packages. These meticulously curated holiday packages offer a perfect blend of adventure, relaxation, and cultural exploration. Discover pristine beaches, vibrant coral reefs, lush greenery, and historical landmarks that make the Andaman Islands a true paradise.</p>
         </div>
+        <div class="container">
+            <div class="p-5 rounded shadow">
+                <!-- Rounded tabs -->
 
+                <ul id="myTab" role="tablist" class="nav nav-tabs nav-pills flex-column flex-sm-row text-center bg-info border-0 rounded-nav">
+                    <i class="fa-solid fa-list text-white" style="margin: 12px;"></i>
+
+                    <?php foreach ($category as $type) : ?>
+                        <li class="nav-item flex-sm-fill">
+                            <a href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($this->session->userdata('pack_id')); ?>/<?php echo $type->id; ?>" role="tab" class="nav-link border-0 text-uppercase font-weight-bold text-white">
+                                <?php echo $type->category_type; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+
+                </ul>
+
+
+
+
+
+
+            </div>
+
+        </div>
     </div>
-
-
-
-
 
 </div>
 
-
-
-
-<div class="container mb-5">
-    <div class="row">
+<div class="container mb-5" id="packages-container">
+    <div class="row" id="packages-list">
         <?php foreach ($packages as $pac) : ?>
-            <div class="col-xl-4 mt-3">
+            <div class="col-xl-4 col-md-6 mt-3">
 
                 <div class="packages">
                     <img src="<?php echo base_url('site/package/' . $pac->image); ?>" alt="package">

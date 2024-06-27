@@ -33,6 +33,7 @@
   }, 2000);
 </script>
 
+
 <body>
   <header class="container-flui">
     <div class="header-top">
@@ -77,42 +78,19 @@
           <ul>
             <li><a href="<?php echo base_url() ?>web">Home</a></li>
             <li><a href="<?php echo base_url() ?>web/about_us">About Us</a></li>
-            <!-- <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
-              <ul class="drop_list">
-                <?php foreach ($pack as $menu) : ?>
-                  <li><a href="<?php echo base_url() ?>web/package_list/<?php echo ($menu->id); ?>"><?php echo $menu->category_name; ?></a>
-                    <ul class="dropdown-1 ">
-                      <li><a href=""> Sub List</a></li>
-                    </ul>
-                  </li>
-
-
-                <?php endforeach; ?>
-              </ul>
-            </li> -->
             <li class="dropdown"><a href="<?php echo base_url() ?>web/destinations">Packages</a>
               <ul class="drop_list">
-                  <li class="system-1"><a href="">family package</a>
+                <?php $i = 1;
+                foreach ($pack as $menu) : ?>
+                  <li class="system-1"><a href="<?php echo base_url() ?>web/package_list/<?php echo ($menu->id); ?>"><?php echo $menu->category_name; ?></a>
                     <ul class="dropdown-1 ">
-                      <li><a href=""> Sub List</a></li>
+                      <?php
+                      foreach ($category_types as $type) : ?>
+                        <li><a href="<?php echo base_url() ?>web/package_type/<?php echo ($menu->id); ?>/<?php echo ($type->id); ?>"><?php echo $type->category_type; ?></a></li>
+                      <?php endforeach; ?>
                     </ul>
                   </li>
-                  <li class="system-2"><a href="">family package</a>
-                    <ul class="dropdown-2">
-                      <li><a href=""> second List....</a></li>
-                    </ul>
-                  </li>
-                  <li class="system-3"><a href="">family package</a>
-                    <ul class="dropdown-3 ">
-                      <li><a href=""> Sub List</a></li>
-                    </ul>
-                  </li>
-                  <li class="system-4"><a href="">family package</a>
-                    <ul class="dropdown-4">
-                      <li><a href=""> second List....</a></li>
-                    </ul>
-                  </li>
-
+                <?php endforeach; ?>
               </ul>
             </li>
             <li><a href="<?php echo base_url() ?>web/blog">Blog</a></li>
@@ -179,9 +157,9 @@
                         <select class="form-control" name="vacation_type" id="exampleFormControlSelect1" aria-label="Default select example">
                           <option selected="">Vaction Type</option>
                           <?php $i = 1;
-                          foreach ($type as $row) :
+                          foreach ($pack as $row) :
                           ?>
-                            <option name="vacation_type" value="<?php echo $row->category_name ?>"><?php echo $row->category_name ?></option>
+                            <option name="vacation_type" value="<?php echo $row->category_name; ?>"><?php echo $row->category_name; ?></option>
                           <?php endforeach; ?>
                         </select>
                       </div>

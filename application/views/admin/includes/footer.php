@@ -29,11 +29,6 @@
 </div>
 <!-- / Layout wrapper -->
 
-<script type="text/javascript">
-   /*  var base_url = '<?php echo base_url(); ?>';
-    var modules = '<?php echo $module; ?>';
-    var pages = '<?php echo $page; ?>'; */
-</script>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
