@@ -73,7 +73,7 @@
 
 
                         <div class=" view_more mt-3 mb-3">
-                            <button class="btn-5" data-toggle="modal" data-target="#myModal"> <i class="fa-solid fa-eye call_phone" style="color: #feaa34; font-size: 15px;"></i>&nbsp Request</button>
+                            <button class="btn-5" data-toggle="modal" data-target="#myModal"> <i class="fa-solid fa-phone call_phone" style="color: #feaa34; font-size: 15px;"></i>&nbsp Request</button>
 
                         </div>
 
@@ -83,7 +83,7 @@
 
 
                         <div class=" view_more mt-3 mb-3">
-                            <button onclick="window.location.href='<?php echo base_url('web/explore/' . $pac->id) ?>'" class="btn-5"> <i class="fa-solid fa-phone call_phone" style="color: #feaa34; font-size: 15px;"></i> &nbsp View </button>
+                            <button onclick="window.location.href='<?php echo base_url('web/explore/' . $pac->id) ?>'" class="btn-5"> <i class="fa-solid fa-eye call_phone" style="color: #feaa34; font-size: 15px;"></i> &nbsp View </button>
                         </div>
 
                     </div>

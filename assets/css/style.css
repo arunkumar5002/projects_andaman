@@ -1224,19 +1224,19 @@ footer .tags ul li {
 .costing h5 {
 	font-weight: 700;
 	font-size: 22px;
-	color: green;
+	color: black;
 }
 
 .costing p {
 	font-weight: 700;
 	font-size: 25px;
-	color: rgb(255, 38, 0) !important;
+	color: green !important;
 }
 
 .costing del {
 	font-weight: 600;
 
-	color: rgb(20, 42, 71);
+	color: rgb(255, 38, 0);
 }
 
 .discount {
