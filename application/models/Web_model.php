@@ -117,7 +117,7 @@ class Web_model extends CI_Model
         JOIN pa_create_package c ON p.package_title = c.id 
         WHERE p.status = 1
         GROUP BY p.package_title, c.category_name
-        LIMIT 4
+        LIMIT 6
     ");
 		return $query->result();
 	}

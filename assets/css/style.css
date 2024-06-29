@@ -596,7 +596,7 @@ header .small-menu {
 	font-weight: 700;
 	font-size: 15px;
 	color: white;
-	width: 280px;
+	width: 100%;
 
 	background-color: rgb(214, 164, 0);
 	padding: 8px 15px 8px 15px;
@@ -2262,6 +2262,9 @@ header.sticky {
 .rounded-pill {
     border-radius: 50rem !important;
 }
- 
+ .nav-link.active {
+    background-color: #17a2b8 !important; /* Bootstrap's bg-info color */
+    color: white !important;
+}
 
 /* tab Style end */

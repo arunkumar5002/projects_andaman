@@ -84,7 +84,7 @@
     </div>
     <div class="dest-row row">
       <?php foreach ($packages as $pack) : ?>
-        <div class="col-lg-3 col-md-6 mb-2">
+        <div class="col-lg-4 col-md-6 mb-2">
           <div class="dest-col">
             <div class="dest-img zoom-effect-1">
 

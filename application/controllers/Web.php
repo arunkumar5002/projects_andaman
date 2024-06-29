@@ -108,6 +108,8 @@ class Web extends CI_Controller
 		$data['category'] = $this->package_model->get_type();
 		$data['packages'] = $this->web_model->get_package_by_title($package_title, $pack_id, $id);
 		$data['pack'] = $this->package_model->get_packages();
+		
+		$data['active_category_id'] = $id;
 
 		$data['content'] = "web/destinations";
 		$this->load->view('web/template', $data);

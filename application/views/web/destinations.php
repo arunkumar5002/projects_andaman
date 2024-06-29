@@ -20,18 +20,18 @@
             <p>Experience the unparalleled beauty of the Andaman Islands with our Awesome Andaman Packages. These meticulously curated holiday packages offer a perfect blend of adventure, relaxation, and cultural exploration. Discover pristine beaches, vibrant coral reefs, lush greenery, and historical landmarks that make the Andaman Islands a true paradise.</p>
         </div>
 
-		  <div class="tab-class text-center">
-                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
-					<?php foreach ($category as $type) : ?>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex mx-3 py-2 border border-info bg-light rounded-pill active" href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($this->session->userdata('pack_id')); ?>/<?php echo $type->id; ?>">
-                                <span class="text-dark" style="width: 150px;"><?php echo $type->category_type; ?></span>
-                            </a>
-                        </li>
-						<?php endforeach; ?>
-                    </ul>
+		<div class="tab-class text-center">
+          <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+            <?php foreach ($category as $type) : ?>
+              <li class="nav-item">
+                <a class="nav-link d-flex mx-3 py-2 border border-info rounded-pill <?php echo ($this->uri->segment(4) == $type->id) ? 'bg-info text-white' : 'bg-light'; ?>" href="<?php echo base_url() ?>web/package_list/<?php echo urlencode($this->session->userdata('pack_id')); ?>/<?php echo $type->id; ?>">
+                    <span style="width: 150px;"><?php echo $type->category_type; ?></span>
+                </a>
+            </li>
+           <?php endforeach; ?>
+          </ul>
+       </div>
 
-           </div>
 
 </div>
 
